@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:musaliarapp/utils/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BigWidget extends StatefulWidget {
