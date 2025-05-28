@@ -109,7 +109,7 @@ class _AboutPageState extends State<AboutPage> {
                             SizeExtension(20).r,
                           ),
                           child: Image.asset(
-                            'assets/images/5 musaliarapp Logo.png',
+                            'assets/images/5 MCET Logo.png',
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -121,7 +121,7 @@ class _AboutPageState extends State<AboutPage> {
                             SizeExtension(20).r,
                           ),
                           child: Image.asset(
-                            'assets/images/KIRF.png',
+                            'assets/images/National_Board_of_Accreditation.svg (1).png',
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -199,7 +199,7 @@ class _AboutPageState extends State<AboutPage> {
                   fontSize: 20.sp,
                   fontWeight: FontWeight.w300,
                   height: 1.2,
-                  color: MyColors.grey,
+                  color: Theme.of(context).textTheme.titleLarge?.color,
                   fontFamily: 'Roboto',
                   letterSpacing: -.1,
                 ),

@@ -31,7 +31,7 @@ class MaineventPage2 extends StatelessWidget {
                     bottomRight: Radius.circular(SizeExtension(40).r),
                   ),
                   image: const DecorationImage(
-                    image: AssetImage('assets/images/musaliarapp_pic.jpeg'),
+                    image: AssetImage('assets/images/mcet.jpg'),
                     fit: BoxFit.cover,
                   ),
                 ),

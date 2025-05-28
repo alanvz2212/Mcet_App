@@ -89,7 +89,7 @@ class PrivayPolicyPage extends StatelessWidget {
                   fontSize: 20.sp,
                   fontWeight: FontWeight.w300,
                   height: 1.2,
-                  color: MyColors.grey,
+                  color: Theme.of(context).textTheme.titleLarge?.color,
                   fontFamily: 'Roboto',
                   letterSpacing: -0.1,
                 ),

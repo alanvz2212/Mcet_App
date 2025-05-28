@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                       height: SizeExtension(210).h,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 255, 255, 255),
+                        color: const Color.fromARGB(255, 86, 85, 85),
                       ),
                       child: Row(
                         children: [
@@ -113,11 +113,11 @@ class _HomePageState extends State<HomePage> {
                             child: Stack(
                               children: [
                                 Positioned(
-                                  bottom: -SizeExtension(80).h,
-                                  left: -SizeExtension(35).w,
+                                  // bottom: -SizeExtension(80).h,
+                                  // left: -SizeExtension(35).w,
                                   child: Image.asset(
-                                    '',
-                                    height: SizeExtension(290).h,
+                                    'assets/images/23 Years of Excel.png',
+                                    // height: SizeExtension(190).h,
                                   ),
                                 ),
                               ],

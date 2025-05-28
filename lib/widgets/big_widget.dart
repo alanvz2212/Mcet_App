@@ -57,7 +57,7 @@ class _BigWidgetState extends State<BigWidget> {
         child: Container(
           height: SizeExtension(210).h,
           width: double.infinity,
-          color: MyColors.white,
+          color: Theme.of(context).scaffoldBackgroundColor,
           child: ListView.builder(
             controller: _controller,
             scrollDirection: Axis.horizontal,
