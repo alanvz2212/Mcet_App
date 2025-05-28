@@ -2,7 +2,7 @@
 package="com.example.musaliarapp">
 
     <application
-        android:label="musaliarapp"
+        android:label="Mcet"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
