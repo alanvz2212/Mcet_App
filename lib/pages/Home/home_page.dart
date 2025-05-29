@@ -475,121 +475,122 @@ class _HomePageState extends State<HomePage> {
                               child: Stack(
                                 children: [
                                   Positioned.fill(
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(
-                                          SizeExtension(40).r,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => Testimonial(
+                                              initialIndex: 1,
+                                              candidates: candidates1,
+                                              assetPaths: assetPaths1,
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(
+                                            SizeExtension(40).r,
+                                          ),
                                         ),
-                                      ),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(
-                                          SizeExtension(40).r,
-                                        ),
-                                        child: Stack(
-                                          children: [
-                                            Positioned.fill(
-                                              child: Padding(
-                                                padding: EdgeInsets.only(
-                                                  bottom: SizeExtension(.5).h,
-                                                ),
-                                                child: GestureDetector(
-                                                  child: Image.asset(
-                                                    'assets/images/11.jpg',
-                                                    fit: BoxFit.cover,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(
+                                            SizeExtension(40).r,
+                                          ),
+                                          child: Stack(
+                                            children: [
+                                              Image.asset(
+                                                'assets/images/11.jpg',
+                                              ),
+                                              Positioned.fill(
+                                                child: Padding(
+                                                  padding: EdgeInsets.only(
+                                                    bottom: SizeExtension(.5).h,
                                                   ),
-                                                  onTap: () {
-                                                    Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            Testimonial(
-                                                              candidates:
-                                                                  candidates1,
-                                                              assetPaths:
-                                                                  assetPaths1,
-                                                              initialIndex: 1,
-                                                            ),
-                                                      ),
-                                                    );
-                                                  },
                                                 ),
                                               ),
-                                            ),
-                                            Positioned(
-                                              bottom: SizeExtension(.5).h,
-                                              left: 0,
-                                              right: 0,
-                                              child: Container(
-                                                height: SizeExtension(200).h,
-                                                decoration: BoxDecoration(
-                                                  gradient: LinearGradient(
-                                                    begin: Alignment.topCenter,
-                                                    end: Alignment.bottomCenter,
-                                                    colors: [
-                                                      MyColors
-                                                          // ignore: deprecated_member_use
-                                                          .Black.withOpacity(0),
-                                                      MyColors
-                                                          // ignore: deprecated_member_use
-                                                          .Black.withOpacity(
-                                                        0.3,
+                                              Positioned(
+                                                bottom: SizeExtension(.5).h,
+                                                left: 0,
+                                                right: 0,
+                                                child: Container(
+                                                  height: SizeExtension(200).h,
+                                                  decoration: BoxDecoration(
+                                                    gradient: LinearGradient(
+                                                      begin:
+                                                          Alignment.topCenter,
+                                                      end: Alignment
+                                                          .bottomCenter,
+                                                      colors: [
+                                                        MyColors
+                                                            // ignore: deprecated_member_use
+                                                            .Black.withOpacity(
+                                                          0,
+                                                        ),
+                                                        MyColors
+                                                            // ignore: deprecated_member_use
+                                                            .Black.withOpacity(
+                                                          0.3,
+                                                        ),
+                                                        MyColors
+                                                            // ignore: deprecated_member_use
+                                                            .Black.withOpacity(
+                                                          0.5,
+                                                        ),
+                                                        MyColors
+                                                            // ignore: deprecated_member_use
+                                                            .Black.withOpacity(
+                                                          0.85,
+                                                        ),
+                                                        MyColors.Black,
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
+                                                left: SizeExtension(30).w,
+                                                bottom: SizeExtension(30).h,
+                                                child: SizedBox(
+                                                  height: SizeExtension(210).h,
+                                                  width: SizeExtension(180).w,
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.end,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        'Student\nTestimonials',
+                                                        maxLines: 2,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        style: TextStyle(
+                                                          fontSize: 25.sp,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color: MyColors.white,
+                                                          height: 1.1,
+                                                        ),
                                                       ),
-                                                      MyColors
-                                                          // ignore: deprecated_member_use
-                                                          .Black.withOpacity(
-                                                        0.5,
+                                                      SizedBox(
+                                                        height: SizeExtension(
+                                                          9,
+                                                        ).h,
                                                       ),
-                                                      MyColors
-                                                          // ignore: deprecated_member_use
-                                                          .Black.withOpacity(
-                                                        0.85,
+                                                      SizedBox(
+                                                        height: SizeExtension(
+                                                          5,
+                                                        ).h,
                                                       ),
-                                                      MyColors.Black,
                                                     ],
                                                   ),
                                                 ),
                                               ),
-                                            ),
-                                            Positioned(
-                                              left: SizeExtension(30).w,
-                                              bottom: SizeExtension(30).h,
-                                              child: SizedBox(
-                                                height: SizeExtension(210).h,
-                                                width: SizeExtension(180).w,
-                                                child: Column(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      'Student\nTestimonials',
-                                                      maxLines: 2,
-                                                      overflow:
-                                                          TextOverflow.ellipsis,
-                                                      style: TextStyle(
-                                                        fontSize: 25.sp,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        color: MyColors.white,
-                                                        height: 1.1,
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: SizeExtension(
-                                                        9,
-                                                      ).h,
-                                                    ),
-                                                    SizedBox(
-                                                      height: SizeExtension(
-                                                        5,
-                                                      ).h,
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -645,18 +646,30 @@ class _HomePageState extends State<HomePage> {
                                   Positioned(
                                     bottom: 0,
                                     right: 0,
-                                    child: Container(
-                                      height: SizeExtension(80).h,
-                                      width: SizeExtension(80).w,
-                                      decoration: BoxDecoration(
-                                        color: Theme.of(
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
                                           context,
-                                        ).textTheme.titleLarge?.color,
-                                        borderRadius: BorderRadius.circular(
-                                          SizeExtension(40).r,
+                                          MaterialPageRoute(
+                                            builder: (context) => Testimonial(
+                                              initialIndex: 1,
+                                              candidates: candidates1,
+                                              assetPaths: assetPaths1,
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                      child: Container(
+                                        height: SizeExtension(80).h,
+                                        width: SizeExtension(80).w,
+                                        decoration: BoxDecoration(
+                                          color: Theme.of(
+                                            context,
+                                          ).textTheme.titleLarge?.color,
+                                          borderRadius: BorderRadius.circular(
+                                            SizeExtension(40).r,
+                                          ),
                                         ),
-                                      ),
-                                      child: GestureDetector(
                                         child: Icon(
                                           CupertinoIcons.arrow_up_right,
                                           size: 30.sp,
@@ -664,19 +677,6 @@ class _HomePageState extends State<HomePage> {
                                             context,
                                           ).scaffoldBackgroundColor,
                                         ),
-
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => Testimonial(
-                                                initialIndex: 1,
-                                                candidates: candidates1,
-                                                assetPaths: assetPaths1,
-                                              ),
-                                            ),
-                                          );
-                                        },
                                       ),
                                     ),
                                   ),

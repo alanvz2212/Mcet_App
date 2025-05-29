@@ -27,22 +27,21 @@ class PrincipalDetails extends StatelessWidget {
           Positioned(
             top: SizeExtension(58).h,
             left: SizeExtension(20).w,
-            child: Container(
-              padding: EdgeInsets.all(SizeExtension(10).r),
-              decoration: BoxDecoration(
-                color: Theme.of(context).textTheme.titleLarge?.color,
-                borderRadius: BorderRadius.circular(SizeExtension(40).r),
-              ),
-              child: GestureDetector(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                padding: EdgeInsets.all(SizeExtension(10).r),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).textTheme.titleLarge?.color,
+                  borderRadius: BorderRadius.circular(SizeExtension(40).r),
+                ),
                 child: Icon(
                   CupertinoIcons.chevron_back,
                   color: Theme.of(context).scaffoldBackgroundColor,
                   size: 24.sp,
                 ),
-                onTap: () {
-                  vibrateIfEnabled(context);
-                  Navigator.pop(context);
-                },
               ),
             ),
           ),

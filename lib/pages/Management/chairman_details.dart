@@ -1,9 +1,7 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
-
 
 class ChairmanDetails extends StatelessWidget {
   const ChairmanDetails({super.key});
@@ -29,22 +27,21 @@ class ChairmanDetails extends StatelessWidget {
           Positioned(
             top: SizeExtension(58).h,
             left: SizeExtension(20).w,
-            child: Container(
-              padding: EdgeInsets.all(SizeExtension(10).r),
-              decoration: BoxDecoration(
-                color: Theme.of(context).textTheme.titleLarge?.color,
-                borderRadius: BorderRadius.circular(SizeExtension(40).r),
-              ),
-              child: GestureDetector(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                padding: EdgeInsets.all(SizeExtension(10).r),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).textTheme.titleLarge?.color,
+                  borderRadius: BorderRadius.circular(SizeExtension(40).r),
+                ),
                 child: Icon(
                   CupertinoIcons.chevron_back,
                   color: Theme.of(context).scaffoldBackgroundColor,
                   size: 24.sp,
                 ),
-                onTap: () {
-                  vibrateIfEnabled(context);
-                  Navigator.pop(context);
-                },
               ),
             ),
           ),
@@ -61,7 +58,10 @@ class ChairmanDetails extends StatelessWidget {
                     topRight: Radius.circular(SizeExtension(20).r),
                   ),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: SizeExtension(20).w, vertical: SizeExtension(20).h),
+                padding: EdgeInsets.symmetric(
+                  horizontal: SizeExtension(20).w,
+                  vertical: SizeExtension(20).h,
+                ),
                 child: SingleChildScrollView(
                   controller: scrollController,
                   child: Column(
@@ -73,16 +73,18 @@ class ChairmanDetails extends StatelessWidget {
                           Text(
                             'CHAIRMAN',
                             style: TextStyle(
-                              color:
-                                  Theme.of(context).textTheme.titleLarge?.color,
+                              color: Theme.of(
+                                context,
+                              ).textTheme.titleLarge?.color,
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                           Icon(
                             Icons.arrow_drop_up,
-                            color:
-                                Theme.of(context).textTheme.titleLarge?.color,
+                            color: Theme.of(
+                              context,
+                            ).textTheme.titleLarge?.color,
                             size: 40.sp,
                           ),
                         ],
@@ -109,10 +111,9 @@ class ChairmanDetails extends StatelessWidget {
                             TextSpan(
                               text: 'About Chairman\n\n',
                               style: TextStyle(
-                                color:
-                                    Theme.of(
-                                      context,
-                                    ).textTheme.titleLarge?.color,
+                                color: Theme.of(
+                                  context,
+                                ).textTheme.titleLarge?.color,
                                 fontSize: 20.sp,
                                 fontFamily: 'Elmessiri',
                                 fontWeight: FontWeight.bold,
@@ -123,10 +124,9 @@ class ChairmanDetails extends StatelessWidget {
                               text:
                                   'Former Government of Kerala officer, \nShri P I Sherief Mohammed, is the President of Ramakrishna Ashram, Pathanamthitta, and Secretary of Bharatiya Vidya Bhavan, Pathanamthitta. He also serves as Senior Vice President of the Kerala Handball Association and Executive Member of the District Olympic Association. He has represented India internationally to promote Sanatana Dharma.\n\n',
                               style: TextStyle(
-                                color:
-                                    Theme.of(
-                                      context,
-                                    ).textTheme.titleLarge?.color,
+                                color: Theme.of(
+                                  context,
+                                ).textTheme.titleLarge?.color,
                                 fontSize: 18.sp,
                                 fontFamily: 'Elmessiri',
                                 fontWeight: FontWeight.w400,
@@ -136,10 +136,9 @@ class ChairmanDetails extends StatelessWidget {
                             TextSpan(
                               text: 'Chairman\'s Message\n\n',
                               style: TextStyle(
-                                color:
-                                    Theme.of(
-                                      context,
-                                    ).textTheme.titleLarge?.color,
+                                color: Theme.of(
+                                  context,
+                                ).textTheme.titleLarge?.color,
                                 fontSize: 20.sp,
                                 fontFamily: 'Elmessiri',
                                 fontWeight: FontWeight.bold,
@@ -150,10 +149,9 @@ class ChairmanDetails extends StatelessWidget {
                               text:
                                   'At Musaliar College of Engineering and Technology, we focus on the holistic growth of students in a nature-friendly campus. We encourage innovation, sustainable solutions, and pluralism. As early adopters of startup culture, we now offer next-gen courses like AI, ML, IoT, and Blockchain. We proudly partner with the Government of Kerala for skill development. We aim to be a centre of excellence for future generations.',
                               style: TextStyle(
-                                color:
-                                    Theme.of(
-                                      context,
-                                    ).textTheme.titleLarge?.color,
+                                color: Theme.of(
+                                  context,
+                                ).textTheme.titleLarge?.color,
                                 fontSize: 18.sp,
                                 fontFamily: 'Elmessiri',
                                 fontWeight: FontWeight.w400,
