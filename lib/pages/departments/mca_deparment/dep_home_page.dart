@@ -331,7 +331,7 @@ class DepmcaHomePage extends StatelessWidget {
 
             const SizedBox(height: 15),
             Text(
-              'OUR ACHIEVEMENTS',
+              'WORKSHOPS CONDUCTED',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
@@ -339,9 +339,11 @@ class DepmcaHomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15),
-            CollectionsWidget(assetPath: 'assets/imagesConvocation.JPG'),
+            CollectionsWidget(
+              assetPath: 'assets/images/sindhu_mis_workshop.jpg',
+            ),
             const SizedBox(height: 10),
-            CollectionsWidget(assetPath: 'assets/imagesEEE.JPG'),
+            CollectionsWidget(assetPath: 'assets/images/5.jpg'),
           ],
         ),
       ),

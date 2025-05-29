@@ -10,6 +10,7 @@ import 'package:musaliarapp/pages/departments/mca_deparment/dep_landing_page.dar
 import 'package:musaliarapp/pages/departments/civil_dep/dep_landing_page.dart';
 import 'package:musaliarapp/pages/departments/mech_dep/dep_landing_page.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
+import 'package:musaliarapp/widgets/college_things.dart';
 import 'package:musaliarapp/widgets/big_widget.dart';
 import 'package:musaliarapp/widgets/savings_card_widget.dart';
 import 'package:musaliarapp/utils/colors.dart';
@@ -112,12 +113,19 @@ class _HomePageState extends State<HomePage> {
                           Expanded(
                             child: Stack(
                               children: [
-                                Positioned(
-                                  // bottom: -SizeExtension(80).h,
-                                  // left: -SizeExtension(35).w,
-                                  child: Image.asset(
-                                    'assets/images/23 Years of Excel.png',
-                                    // height: SizeExtension(190).h,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => CollegeThings(),
+                                      ),
+                                    );
+                                  },
+                                  child: Positioned(
+                                    child: Image.asset(
+                                      'assets/images/23 Years of Excel.png',
+                                    ),
                                   ),
                                 ),
                               ],
@@ -160,6 +168,7 @@ class _HomePageState extends State<HomePage> {
                                         children: [
                                           SizedBox(height: SizeExtension(10).h),
                                           Padding(
+                                            
                                             padding: EdgeInsets.only(
                                               left: SizeExtension(10).w,
                                             ),

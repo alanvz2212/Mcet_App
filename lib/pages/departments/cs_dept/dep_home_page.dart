@@ -427,7 +427,7 @@ class DepcsHomePage extends StatelessWidget {
 
             const SizedBox(height: 15),
             Text(
-              'OUR ACHIEVEMENTS',
+              'WORKSHOPS CONDUCTED',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
