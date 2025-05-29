@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:musaliarapp/pages/departments/mca_deparment/dep_home_page.dart';
+import 'package:musaliarapp/pages/departments/mba_dept/dep_home_page.dart';
 import 'package:musaliarapp/utils/colors.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
 
@@ -24,7 +24,7 @@ class DepmbaLandingPage extends StatelessWidget {
 
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DepmcaHomePage()),
+                  MaterialPageRoute(builder: (context) => DepmbaHomePage()),
                 );
               },
               child: Image.asset(

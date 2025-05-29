@@ -105,8 +105,13 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       height: SizeExtension(210).h,
                       width: double.infinity,
+                      clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 86, 85, 85),
+                        color: Theme.of(context).textTheme.titleLarge?.color,
+                        border: Border.all(
+                          color: Theme.of(context).scaffoldBackgroundColor,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       child: Row(
                         children: [
@@ -122,11 +127,9 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     );
                                   },
-                                  child: Positioned(
-                                    child: Image.asset(
-                                      'assets/images/23 Years of Excel.png',
-                                    ),
-                                  ),
+                                  // child: Image.asset(
+                                  //   'assets/images/mcet_pic.jpeg',
+                                  // ),
                                 ),
                               ],
                             ),
@@ -168,7 +171,6 @@ class _HomePageState extends State<HomePage> {
                                         children: [
                                           SizedBox(height: SizeExtension(10).h),
                                           Padding(
-                                            
                                             padding: EdgeInsets.only(
                                               left: SizeExtension(10).w,
                                             ),
@@ -201,12 +203,9 @@ class _HomePageState extends State<HomePage> {
                                         width: SizeExtension(200).w,
                                         height: SizeExtension(70).h,
                                         decoration: BoxDecoration(
-                                          color: const Color.fromARGB(
-                                            255,
-                                            86,
-                                            85,
-                                            85,
-                                          ),
+                                          color: Theme.of(
+                                            context,
+                                          ).scaffoldBackgroundColor,
                                           borderRadius: BorderRadius.circular(
                                             SizeExtension(23).r,
                                           ),
@@ -235,7 +234,6 @@ class _HomePageState extends State<HomePage> {
                                                       237,
                                                       236,
                                                       236,
-                                                      // ignore: deprecated_member_use
                                                     ).withOpacity(0.1),
                                                     blurRadius: SizeExtension(
                                                       5,
@@ -268,7 +266,10 @@ class _HomePageState extends State<HomePage> {
                                                   'Overview',
                                                   style: TextStyle(
                                                     fontSize: 15.sp,
-                                                    color: MyColors.white,
+                                                    color: Theme.of(context)
+                                                        .textTheme
+                                                        .titleLarge
+                                                        ?.color,
                                                     fontWeight: FontWeight.w700,
                                                     letterSpacing: -1,
                                                   ),

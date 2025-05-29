@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:musaliarapp/pages/departments/mech_dep/event_details/event_details_page.dart';
 import 'package:musaliarapp/utils/colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DepeeeHomePage extends StatelessWidget {
   const DepeeeHomePage({super.key});
@@ -27,7 +27,7 @@ class DepeeeHomePage extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 1),
               decoration: BoxDecoration(
                 // ignore: deprecated_member_use
-                color: MyColors.Black.withOpacity(0.6),
+                color: Theme.of(context).textTheme.titleLarge?.color,
                 borderRadius: BorderRadius.circular(100),
               ),
             ),
@@ -60,442 +60,52 @@ class DepeeeHomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15),
-            SizedBox(
-              height: 260,
-              child: Row(
-                children: [
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(
-                        width: 200,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      height: 210,
-                                      left: -6,
-                                      child: Image.asset(
-                                        'assets/images/Musaliar_Sarath.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              height: 45,
-                              child: Text(
-                                'Prof Sarath Raj S\nHead of the department',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Roboto',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 15),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(
-                        width: 200,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Stack(
-                                  children: [
-                                    Positioned.fill(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(
-                                            begin: Alignment.topCenter,
-                                            end: Alignment.bottomCenter,
-                                            colors: [
-                                              MyColors.x,
-
-                                              // ignore: deprecated_member_use
-                                              MyColors.x.withOpacity(0.2),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      height: 240,
-                                      left: -17,
-                                      child: Image.asset(
-                                        'assets/images/IMG_5856-priya-gomathy-das.jpeg',
-                                        fit: BoxFit.fitWidth,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              height: 45,
-                              child: Text(
-                                'Dr Priya G Das\nAssociate Professor',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Roboto',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+            Container(
+              height: SizeExtension(600).h,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Theme.of(context).scaffoldBackgroundColor,
+                borderRadius: BorderRadius.circular(SizeExtension(40).r),
               ),
-            ),
-            SizedBox(
-              height: 260,
-              child: Row(
+              padding: EdgeInsets.only(
+                top: SizeExtension(30).h,
+                left: SizeExtension(20).w,
+                right: SizeExtension(20).w,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(
-                        width: 200,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      height: 210,
-                                      left: -14,
-                                      child: Image.asset(
-                                        'assets/images/renuka-2.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              height: 45,
-                              child: Text(
-                                'Ms Renuka Devi SM\nAssociate Professor',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Roboto',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                  Padding(padding: EdgeInsets.only(bottom: SizeExtension(8).h)),
+                  buildPersonTile(
+                    name: 'Ms Shyma Kareem (HOD)',
+                    subtitle: 'shymshiju@gmail.com',
+                    context: context,
                   ),
-
-                  const SizedBox(width: 15),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(
-                        width: 200,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Stack(
-                                  children: [
-                                    Positioned.fill(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(
-                                            begin: Alignment.topCenter,
-                                            end: Alignment.bottomCenter,
-                                            colors: [
-                                              MyColors.x,
-
-                                              // ignore: deprecated_member_use
-                                              MyColors.x.withOpacity(0.2),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      height: 400,
-                                      left: -14,
-                                      right: -14,
-                                      child: Image.asset(
-                                        'assets/images/sree-renjini.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              height: 45,
-                              child: Text(
-                                'Ms Sreerenjini K\nAssociate Professor',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Roboto',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                  buildPersonTile(
+                    name: 'Ms Jogimol Joseph',
+                    subtitle: 'jogimolb@gmail.com',
+                    context: context,
+                  ),
+                  buildPersonTile(
+                    name: 'Ms Sindhu Daniel',
+                    subtitle: 'sindhudaniel@yahoo.com',
+                    context: context,
+                  ),
+                  buildPersonTile(
+                    name: 'Ms Rinsa Rees',
+                    subtitle: 'rinsa.rees@gmail.com',
+                    context: context,
+                  ),
+                  buildPersonTile(
+                    name: 'Ms Preethi Thomas',
+                    subtitle: '',
+                    context: context,
                   ),
                 ],
               ),
             ),
 
-            SizedBox(
-              height: 260,
-              child: Row(
-                children: [
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(
-                        width: 200,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      height: 270,
-                                      top: -1,
-                                      left: -9,
-                                      right: -9,
-                                      child: Image.asset(
-                                        'assets/images/blessy-1.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              height: 45,
-                              child: Text(
-                                'Ms Blessy A Rahiman\nAssistant Professor',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Roboto',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 15),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(
-                        width: 200,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Stack(
-                                  children: [
-                                    Positioned.fill(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(
-                                            begin: Alignment.topCenter,
-                                            end: Alignment.bottomCenter,
-                                            colors: [
-                                              MyColors.x,
-
-                                              // ignore: deprecated_member_use
-                                              MyColors.x.withOpacity(0.2),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      height: 400,
-                                      left: -14,
-                                      right: -14,
-                                      child: Image.asset(
-                                        'assets/images/niza.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              height: 45,
-                              child: Text(
-                                'Ms Nizamoni S\nAssistant Professor',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Roboto',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 260,
-              child: Row(
-                children: [
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(
-                        width: 200,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      height: 210,
-                                      left: -14,
-                                      child: Image.asset(
-                                        'assets/images/ciya-1.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              height: 45,
-                              child: Text(
-                                'Ms Ciya Paulose\nAssociate Professor',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Roboto',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 15),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(
-                        width: 200,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Stack(
-                                  children: [
-                                    Positioned.fill(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(
-                                            begin: Alignment.topCenter,
-                                            end: Alignment.bottomCenter,
-                                            colors: [
-                                              MyColors.x,
-
-                                              // ignore: deprecated_member_use
-                                              MyColors.x.withOpacity(0.2),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      height: 400,
-                                      left: -14,
-                                      right: -14,
-                                      child: Image.asset(
-                                        'assets/images/ancy.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              height: 45,
-                              child: Text(
-                                'Ms Ancy M Alias\nAssistant Professor',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Roboto',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 15),
+            const SizedBox(height: 5),
             Text(
               'WORKSHOPS CONDUCTED',
               style: TextStyle(
@@ -505,9 +115,11 @@ class DepeeeHomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15),
-            CollectionsWidget(assetPath: 'assets/imagesConvocation.JPG'),
+            CollectionsWidget(
+              assetPath: 'assets/images/sindhu_mis_workshop.jpg',
+            ),
             const SizedBox(height: 10),
-            CollectionsWidget(assetPath: 'assets/imagesEEE.JPG'),
+            CollectionsWidget(assetPath: 'assets/images/5.jpg'),
           ],
         ),
       ),
@@ -527,16 +139,72 @@ class CollectionsWidget extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 1),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const EventDetailsPage()),
-            );
-          },
-          child: Image.asset(assetPath, fit: BoxFit.cover),
-        ),
+        child: Image.asset(assetPath, fit: BoxFit.cover),
       ),
     );
   }
+}
+
+Widget buildPersonTile({
+  required BuildContext context,
+  required String name,
+  required String subtitle,
+  Icon? icon,
+}) {
+  return Container(
+    height: SizeExtension(100).h,
+    margin: EdgeInsets.only(bottom: SizeExtension(10).h),
+    child: Row(
+      children: [
+        SizedBox(
+          height: SizeExtension(100).h,
+          width: SizeExtension(0).w,
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(SizeExtension(50).r),
+                  ),
+                  padding: EdgeInsets.all(SizeExtension(18).r),
+                  // child: Image.asset(image, fit: BoxFit.contain),
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(width: SizeExtension(15).w),
+        Expanded(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                name,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+                style: TextStyle(
+                  color: Theme.of(context).textTheme.titleLarge?.color,
+                  fontSize: 17.sp,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(height: SizeExtension(4).h),
+              Text(
+                subtitle,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+                style: TextStyle(
+                  color: Theme.of(context).textTheme.titleLarge?.color,
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
+            ],
+          ),
+        ),
+        if (icon != null) icon,
+      ],
+    ),
+  );
 }
