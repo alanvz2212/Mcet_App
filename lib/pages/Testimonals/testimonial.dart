@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:musaliarapp/utils/colors.dart';
+import 'package:musaliarapp/vibration/vibration_helper.dart';
 import 'package:musaliarapp/widgets_3/swipe_testimonail.dart';
 
 class Testimonial extends StatefulWidget {
@@ -75,7 +77,10 @@ class TestimonialPageState extends State<Testimonial> {
             top: 50,
             left: 20,
             child: GestureDetector(
-              onTap: () => Navigator.pop(context),
+              onTap: () {
+                vibrateIfEnabled(context);
+                Navigator.pop(context);
+              },
               behavior: HitTestBehavior.translucent,
               child: Container(
                 decoration: BoxDecoration(
@@ -85,7 +90,7 @@ class TestimonialPageState extends State<Testimonial> {
                 ),
                 padding: const EdgeInsets.all(13),
                 child: Icon(
-                  Icons.arrow_back_rounded,
+                  CupertinoIcons.chevron_back,
                   size: 25,
                   color: Colors.white,
                 ),
@@ -248,17 +253,24 @@ class DaitngProfileCard extends StatelessWidget {
                     children: [
                       Expanded(
                         child: GestureDetector(
+                          onTap: () {
+                            vibrateIfEnabled(context);
+                            controller.swipe(CardSwiperDirection.left);
+                          },
                           behavior: HitTestBehavior.translucent,
-                          onTap: () =>
-                              controller.swipe(CardSwiperDirection.left),
                           child: Container(
                             width: 50,
                             height: 50,
                             decoration: BoxDecoration(
-                              color: MyColors.darkGrey,
+                              color: Theme.of(
+                                context,
+                              ).textTheme.titleLarge?.color,
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            child: const Icon(Icons.clear, color: Colors.white),
+                            child: Icon(
+                              CupertinoIcons.chevron_back,
+                              color: Theme.of(context).scaffoldBackgroundColor,
+                            ),
                           ),
                         ),
                       ),
@@ -266,18 +278,23 @@ class DaitngProfileCard extends StatelessWidget {
                       Expanded(
                         child: GestureDetector(
                           behavior: HitTestBehavior.translucent,
-                          onTap: () =>
-                              controller.swipe(CardSwiperDirection.right),
+                          onTap: () {
+                            vibrateIfEnabled(context);
+                            controller.swipe(CardSwiperDirection.right);
+                          },
+                          // onTap: () =>
                           child: Container(
                             width: 50,
                             height: 50,
                             decoration: BoxDecoration(
-                              color: MyColors.purple,
+                              color: Theme.of(
+                                context,
+                              ).textTheme.titleLarge?.color,
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            child: const Icon(
-                              Icons.favorite,
-                              color: Colors.red,
+                            child: Icon(
+                              CupertinoIcons.chevron_forward,
+                              color: Theme.of(context).scaffoldBackgroundColor,
                             ),
                           ),
                         ),
