@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:musaliarapp/home_page_widgets/header_widget.dart';
+import 'package:musaliarapp/pages/Testimonals/testimonial.dart';
 import 'package:musaliarapp/pages/departments/cs_dept/dep_landing_page.dart';
 import 'package:musaliarapp/pages/departments/ece_dep/dep_landing_page.dart';
 import 'package:musaliarapp/pages/departments/eee_dept/dep_landing_page.dart';
@@ -14,10 +15,10 @@ import 'package:musaliarapp/widgets/college_things.dart';
 import 'package:musaliarapp/widgets/big_widget.dart';
 import 'package:musaliarapp/widgets/savings_card_widget.dart';
 import 'package:musaliarapp/utils/colors.dart';
-import 'package:musaliarapp/widgets_3/activity_tile_list_view_widget.dart';
 import 'package:musaliarapp/widgets_3/bottom_navigation_bar.dart';
 import 'package:musaliarapp/widgets_3/s_custom_painter.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:musaliarapp/widgets_3/swipe_testimonail.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -33,6 +34,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final candidates1 = SwipeTestimonail.getCandidates();
+    final assetPaths1 = SwipeTestimonail.getAssetPaths();
+
+    SwipeTestimonail.getCandidates();
+    SwipeTestimonail.getAssetPaths();
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Stack(
@@ -120,6 +126,7 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 GestureDetector(
                                   onTap: () {
+                                    vibrateIfEnabled(context);
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -127,9 +134,6 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     );
                                   },
-                                  // child: Image.asset(
-                                  //   'assets/images/mcet_pic.jpeg',
-                                  // ),
                                 ),
                               ],
                             ),
@@ -234,6 +238,7 @@ class _HomePageState extends State<HomePage> {
                                                       237,
                                                       236,
                                                       236,
+                                                    // ignore: deprecated_member_use
                                                     ).withOpacity(0.1),
                                                     blurRadius: SizeExtension(
                                                       5,
@@ -461,8 +466,6 @@ class _HomePageState extends State<HomePage> {
                               },
                             ),
                             SizedBox(height: SizeExtension(20).h),
-                            ActivityTileListView(),
-                            SizedBox(height: SizeExtension(20).h),
                             Container(
                               height: SizeExtension(380).h,
                               margin: EdgeInsets.symmetric(
@@ -489,9 +492,26 @@ class _HomePageState extends State<HomePage> {
                                                 padding: EdgeInsets.only(
                                                   bottom: SizeExtension(.5).h,
                                                 ),
-                                                child: Image.asset(
-                                                  'assets/images/11.jpg',
-                                                  fit: BoxFit.cover,
+                                                child: GestureDetector(
+                                                  child: Image.asset(
+                                                    'assets/images/11.jpg',
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            Testimonial(
+                                                              candidates:
+                                                                  candidates1,
+                                                              assetPaths:
+                                                                  assetPaths1,
+                                                              initialIndex: 1,
+                                                            ),
+                                                      ),
+                                                    );
+                                                  },
                                                 ),
                                               ),
                                             ),
