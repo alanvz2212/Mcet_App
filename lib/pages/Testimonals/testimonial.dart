@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
-import 'package:musaliarapp/utils/colors.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
 import 'package:musaliarapp/widgets_3/swipe_testimonail.dart';
 
@@ -198,33 +197,6 @@ class DaitngProfileCard extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  // Wrap(
-                  //   runSpacing: 5,
-                  //   children: candidate.hobbies
-                  //       .map(
-                  //         (hobby) => Container(
-                  //           padding: const EdgeInsets.symmetric(
-                  //             horizontal: 12,
-                  //             vertical: 5,
-                  //           ),
-                  //           margin: const EdgeInsets.only(right: 5),
-                  //           decoration: BoxDecoration(
-                  //             // ignore: deprecated_member_use
-                  //             color: Colors.grey.shade300.withOpacity(0.3),
-                  //             borderRadius: BorderRadius.circular(20),
-                  //           ),
-                  //           child: Text(
-                  //             hobby,
-                  //             style: const TextStyle(
-                  //               color: Colors.white,
-                  //               fontSize: 16,
-                  //             ),
-                  //           ),
-                  //         ),
-                  //       )
-                  //       .toList(),
-                  // ),
                   const SizedBox(height: 10),
                   Text(
                     'Bio',

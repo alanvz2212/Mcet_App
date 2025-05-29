@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/pages/Management/chairman_details.dart';
 import 'package:musaliarapp/pages/Management/principal_details.dart';
+import 'package:musaliarapp/vibration/vibration_helper.dart';
 import 'package:musaliarapp/widgets_3/bottom_navigation_bar.dart';
 
 class ManagementPage extends StatefulWidget {
@@ -24,7 +24,10 @@ class _ManagementPageState extends State<ManagementPage> {
               children: [
                 Container(
                   height: SizeExtension(170).h,
-                  padding: EdgeInsets.only(top: SizeExtension(40).h, bottom: SizeExtension(40).h),
+                  padding: EdgeInsets.only(
+                    top: SizeExtension(40).h,
+                    bottom: SizeExtension(40).h,
+                  ),
                   decoration: BoxDecoration(
                     color: Theme.of(context).scaffoldBackgroundColor,
                     borderRadius: BorderRadius.only(
@@ -40,16 +43,17 @@ class _ManagementPageState extends State<ManagementPage> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Padding(
-                              padding: EdgeInsets.symmetric(vertical: SizeExtension(44).h),
+                              padding: EdgeInsets.symmetric(
+                                vertical: SizeExtension(44).h,
+                              ),
                             ),
                             SizedBox(width: SizeExtension(96).w),
                             Text(
                               'Management',
                               style: TextStyle(
-                                color:
-                                    Theme.of(
-                                      context,
-                                    ).textTheme.titleLarge?.color,
+                                color: Theme.of(
+                                  context,
+                                ).textTheme.titleLarge?.color,
                                 fontSize: 28.sp,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -68,7 +72,11 @@ class _ManagementPageState extends State<ManagementPage> {
                     color: Theme.of(context).scaffoldBackgroundColor,
                     borderRadius: BorderRadius.circular(SizeExtension(40).r),
                   ),
-                  padding: EdgeInsets.only(top: SizeExtension(10).h, left: SizeExtension(20).w, right: SizeExtension(20).w),
+                  padding: EdgeInsets.only(
+                    top: SizeExtension(10).h,
+                    left: SizeExtension(20).w,
+                    right: SizeExtension(20).w,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,8 +89,9 @@ class _ManagementPageState extends State<ManagementPage> {
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           style: TextStyle(
-                            color:
-                                Theme.of(context).textTheme.titleLarge?.color,
+                            color: Theme.of(
+                              context,
+                            ).textTheme.titleLarge?.color,
                             fontSize: 20.sp,
                             fontWeight: FontWeight.bold,
                           ),
@@ -90,6 +99,7 @@ class _ManagementPageState extends State<ManagementPage> {
                       ),
                       GestureDetector(
                         onTap: () {
+                          vibrateIfEnabled(context);
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -111,8 +121,9 @@ class _ManagementPageState extends State<ManagementPage> {
                           title: Text(
                             'Mr. P I Sherif Muhammed',
                             style: TextStyle(
-                              color:
-                                  Theme.of(context).textTheme.titleLarge?.color,
+                              color: Theme.of(
+                                context,
+                              ).textTheme.titleLarge?.color,
                               fontSize: 17.sp,
                               fontWeight: FontWeight.w600,
                             ),
@@ -120,8 +131,9 @@ class _ManagementPageState extends State<ManagementPage> {
                           subtitle: Text(
                             'Chairman',
                             style: TextStyle(
-                              color:
-                                  Theme.of(context).textTheme.titleLarge?.color,
+                              color: Theme.of(
+                                context,
+                              ).textTheme.titleLarge?.color,
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w300,
                             ),
@@ -129,16 +141,20 @@ class _ManagementPageState extends State<ManagementPage> {
                           trailing: Icon(
                             Icons.arrow_forward_ios,
                             size: 20,
-                            color:
-                                Theme.of(context).textTheme.titleLarge?.color,
+                            color: Theme.of(
+                              context,
+                            ).textTheme.titleLarge?.color,
                           ),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(SizeExtension(12).r),
+                            borderRadius: BorderRadius.circular(
+                              SizeExtension(12).r,
+                            ),
                           ),
                         ),
                       ),
                       GestureDetector(
                         onTap: () {
+                          vibrateIfEnabled(context);
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -160,8 +176,9 @@ class _ManagementPageState extends State<ManagementPage> {
                           title: Text(
                             'Dr. Priya G Das',
                             style: TextStyle(
-                              color:
-                                  Theme.of(context).textTheme.titleLarge?.color,
+                              color: Theme.of(
+                                context,
+                              ).textTheme.titleLarge?.color,
                               fontSize: 17.sp,
                               fontWeight: FontWeight.w600,
                             ),
@@ -169,8 +186,9 @@ class _ManagementPageState extends State<ManagementPage> {
                           subtitle: Text(
                             'Principal',
                             style: TextStyle(
-                              color:
-                                  Theme.of(context).textTheme.titleLarge?.color,
+                              color: Theme.of(
+                                context,
+                              ).textTheme.titleLarge?.color,
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w300,
                             ),
@@ -178,11 +196,14 @@ class _ManagementPageState extends State<ManagementPage> {
                           trailing: Icon(
                             Icons.arrow_forward_ios,
                             size: 20.sp,
-                            color:
-                                Theme.of(context).textTheme.titleLarge?.color,
+                            color: Theme.of(
+                              context,
+                            ).textTheme.titleLarge?.color,
                           ),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(SizeExtension(12).r),
+                            borderRadius: BorderRadius.circular(
+                              SizeExtension(12).r,
+                            ),
                           ),
                         ),
                       ),
@@ -197,7 +218,11 @@ class _ManagementPageState extends State<ManagementPage> {
                     color: Theme.of(context).scaffoldBackgroundColor,
                     borderRadius: BorderRadius.circular(SizeExtension(40).r),
                   ),
-                  padding: EdgeInsets.only(top: SizeExtension(30).h, left: SizeExtension(20).w, right: SizeExtension(20).w),
+                  padding: EdgeInsets.only(
+                    top: SizeExtension(30).h,
+                    left: SizeExtension(20).w,
+                    right: SizeExtension(20).w,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -206,8 +231,9 @@ class _ManagementPageState extends State<ManagementPage> {
                         child: Text(
                           'Trust',
                           style: TextStyle(
-                            color:
-                                Theme.of(context).textTheme.titleLarge?.color,
+                            color: Theme.of(
+                              context,
+                            ).textTheme.titleLarge?.color,
                             fontSize: 20.sp,
                             fontWeight: FontWeight.bold,
                           ),
