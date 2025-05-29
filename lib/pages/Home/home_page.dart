@@ -238,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                                                       237,
                                                       236,
                                                       236,
-                                                    // ignore: deprecated_member_use
+                                                      // ignore: deprecated_member_use
                                                     ).withOpacity(0.1),
                                                     blurRadius: SizeExtension(
                                                       5,
@@ -656,12 +656,27 @@ class _HomePageState extends State<HomePage> {
                                           SizeExtension(40).r,
                                         ),
                                       ),
-                                      child: Icon(
-                                        CupertinoIcons.arrow_up_right,
-                                        size: 30.sp,
-                                        color: Theme.of(
-                                          context,
-                                        ).scaffoldBackgroundColor,
+                                      child: GestureDetector(
+                                        child: Icon(
+                                          CupertinoIcons.arrow_up_right,
+                                          size: 30.sp,
+                                          color: Theme.of(
+                                            context,
+                                          ).scaffoldBackgroundColor,
+                                        ),
+
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => Testimonial(
+                                                initialIndex: 1,
+                                                candidates: candidates1,
+                                                assetPaths: assetPaths1,
+                                              ),
+                                            ),
+                                          );
+                                        },
                                       ),
                                     ),
                                   ),
