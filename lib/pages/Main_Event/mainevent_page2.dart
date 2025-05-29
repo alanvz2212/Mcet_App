@@ -120,7 +120,7 @@ class MaineventPage2 extends StatelessWidget {
                           ),
                           SizedBox(height: SizeExtension(2).h),
                           imageBox(
-                            'assets/images/Convocation.JPG',
+                            'assets/images/miss.jpg',
                             SizeExtension(230).h,
                           ),
                           SizedBox(height: SizeExtension(2).h),
@@ -141,11 +141,20 @@ class MaineventPage2 extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          imageBox('name', SizeExtension(160).h),
+                          imageBox(
+                            'assets/images/gown.jpg',
+                            SizeExtension(160).h,
+                          ),
                           SizedBox(height: SizeExtension(2).h),
-                          imageBox('name', SizeExtension(220).h),
+                          imageBox(
+                            'assets/images/ramp_walk.jpg',
+                            SizeExtension(220).h,
+                          ),
                           SizedBox(height: SizeExtension(2).h),
-                          imageBox('name', SizeExtension(220).h),
+                          imageBox(
+                            'assets/images/dj.jpg',
+                            SizeExtension(220).h,
+                          ),
                         ],
                       ),
                     ),
@@ -153,7 +162,7 @@ class MaineventPage2 extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          imageBox('name', SizeExtension(230).h),
+                          imageBox('assets/images/football.jpg', SizeExtension(230).h),
                           SizedBox(height: SizeExtension(2).h),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(

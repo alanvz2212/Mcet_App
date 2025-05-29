@@ -477,6 +477,7 @@ class _HomePageState extends State<HomePage> {
                                   Positioned.fill(
                                     child: GestureDetector(
                                       onTap: () {
+                                        vibrateIfEnabled(context);
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
@@ -648,6 +649,7 @@ class _HomePageState extends State<HomePage> {
                                     right: 0,
                                     child: GestureDetector(
                                       onTap: () {
+                                        vibrateIfEnabled(context);
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(

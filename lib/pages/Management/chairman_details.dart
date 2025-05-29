@@ -29,6 +29,7 @@ class ChairmanDetails extends StatelessWidget {
             left: SizeExtension(20).w,
             child: GestureDetector(
               onTap: () {
+                vibrateIfEnabled(context);
                 Navigator.pop(context);
               },
               child: Container(

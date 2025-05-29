@@ -6,7 +6,6 @@ class SwipeTestimonail {
   final int age;
   final bool isOnline;
   final String bio;
-  final List<String> hobbies;
 
   const SwipeTestimonail({
     required this.name,
@@ -14,13 +13,12 @@ class SwipeTestimonail {
     required this.isOnline,
     required this.age,
     required this.bio,
-    required this.hobbies,
   });
 
   static List<String> getAssetPaths() {
     final list = List.generate(
       13,
-      (index) => 'assets/profiles/profile_$index.png',
+      (index) => 'assets/profiles/profile_$index.jpg',
     );
     list.shuffle();
     return list;
@@ -29,7 +27,7 @@ class SwipeTestimonail {
   static List<SwipeTestimonail> getCandidates() {
     List<SwipeTestimonail> candidates = [
       SwipeTestimonail(
-        name: 'Hannah',
+        name: '',
         distanceInFt: Random.secure().nextInt(50) + 100,
         age: Random.secure().nextInt(10) + 25,
         isOnline: Random.secure().nextBool(),
@@ -39,7 +37,8 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
+
+        // hobbies: _getShuffledHobies(),
       ),
       SwipeTestimonail(
         name: 'Jane',
@@ -52,7 +51,6 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
       ),
       SwipeTestimonail(
         name: 'Katie',
@@ -65,7 +63,6 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
       ),
       SwipeTestimonail(
         name: 'Emily',
@@ -78,7 +75,6 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
       ),
       SwipeTestimonail(
         name: 'Diana',
@@ -91,7 +87,6 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
       ),
       SwipeTestimonail(
         name: 'Samantha',
@@ -104,7 +99,6 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
       ),
       SwipeTestimonail(
         name: 'Isabella',
@@ -117,7 +111,6 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
       ),
       SwipeTestimonail(
         name: 'Ella',
@@ -130,7 +123,6 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
       ),
       SwipeTestimonail(
         name: 'Olivia',
@@ -143,31 +135,10 @@ class SwipeTestimonail {
             'In my free time, I like to go out and have fun with my friends. '
             'I\'m looking for someone who shares my interests and is'
             ' looking for a serious relationship.',
-        hobbies: _getShuffledHobies(),
       ),
     ];
 
     candidates.shuffle();
     return candidates;
-  }
-
-  static List<String> _getShuffledHobies() {
-    final hobbies = [
-      'Hiking',
-      'Reading',
-      'Swimming',
-      'Drawing',
-      'Modeling',
-      'Designing',
-    ];
-
-    hobbies.shuffle();
-
-    hobbies.removeAt(Random.secure().nextInt(hobbies.length));
-    if (Random.secure().nextBool()) {
-      hobbies.removeAt(Random.secure().nextInt(hobbies.length));
-    }
-
-    return hobbies;
   }
 }

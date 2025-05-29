@@ -194,32 +194,32 @@ class DaitngProfileCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Wrap(
-                    runSpacing: 5,
-                    children: candidate.hobbies
-                        .map(
-                          (hobby) => Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 5,
-                            ),
-                            margin: const EdgeInsets.only(right: 5),
-                            decoration: BoxDecoration(
-                              // ignore: deprecated_member_use
-                              color: Colors.grey.shade300.withOpacity(0.3),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Text(
-                              hobby,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                        )
-                        .toList(),
-                  ),
+                  // Wrap(
+                  //   runSpacing: 5,
+                  //   children: candidate.hobbies
+                  //       .map(
+                  //         (hobby) => Container(
+                  //           padding: const EdgeInsets.symmetric(
+                  //             horizontal: 12,
+                  //             vertical: 5,
+                  //           ),
+                  //           margin: const EdgeInsets.only(right: 5),
+                  //           decoration: BoxDecoration(
+                  //             // ignore: deprecated_member_use
+                  //             color: Colors.grey.shade300.withOpacity(0.3),
+                  //             borderRadius: BorderRadius.circular(20),
+                  //           ),
+                  //           child: Text(
+                  //             hobby,
+                  //             style: const TextStyle(
+                  //               color: Colors.white,
+                  //               fontSize: 16,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //       )
+                  //       .toList(),
+                  // ),
                   const SizedBox(height: 10),
                   Text(
                     'Bio',

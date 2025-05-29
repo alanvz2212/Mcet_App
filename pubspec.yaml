@@ -84,19 +84,7 @@ flutter:
     - assets/images/5.jpg
     - assets/images/sindhu_mis_workshop.jpg
     - assets/profiles/
-    - assets/profiles/profile_0.png
-    - assets/profiles/profile_1.png
-    - assets/profiles/profile_2.png
-    - assets/profiles/profile_3.png
-    - assets/profiles/profile_4.png
-    - assets/profiles/profile_5.png
-    - assets/profiles/profile_6.png
-    - assets/profiles/profile_7.png
-    - assets/profiles/profile_8.png
-    - assets/profiles/profile_9.png
-    - assets/profiles/profile_10.png
-    - assets/profiles/profile_11.png
-    - assets/profiles/profile_12.png
+    
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
