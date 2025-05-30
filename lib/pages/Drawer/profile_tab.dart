@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/pages/Drawer/Navigate_Pages/contact_page.dart';
-import 'package:musaliarapp/pages/Drawer/Navigate_Pages/more_page.dart';
 import 'package:musaliarapp/pages/Drawer/Navigate_Pages/about_page.dart';
 import 'package:musaliarapp/pages/Drawer/Navigate_Pages/privay_policy_page.dart';
 import 'package:musaliarapp/pages/Drawer/Navigate_Pages/terms_page.dart';
@@ -71,23 +70,23 @@ class ProfileTab extends StatelessWidget {
                   activeColor: MyColors.darkGreen,
                 ),
               ),
-              SizedBox(height: SizeExtension(15).h),
-              _buildListTile(
-                context,
-                icon: Icons.event_available_rounded,
-                iconBgColor: MyColors.darkGreen,
-                title: 'Rate App',
-                textColor: textColor,
-                onTap: () {
-                  vibrateIfEnabled(context);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Moreapppage(),
-                    ),
-                  );
-                },
-              ),
+              // SizedBox(height: SizeExtension(15).h),
+              // _buildListTile(
+              //   context,
+              //   icon: Icons.event_available_rounded,
+              //   iconBgColor: MyColors.darkGreen,
+              //   title: 'Rate App',
+              //   textColor: textColor,
+              //   onTap: () {
+              //     vibrateIfEnabled(context);
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //         builder: (context) => const Moreapppage(),
+              //       ),
+              //     );
+              //   },
+              // ),
               SizedBox(height: SizeExtension(20).h),
               _buildListTile(
                 context,

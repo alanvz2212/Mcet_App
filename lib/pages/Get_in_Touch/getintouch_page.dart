@@ -1,4 +1,3 @@
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
@@ -43,7 +42,12 @@ class _GetintouchPageState extends State<GetintouchPage> {
       ScaffoldMessenger.of(
         // ignore: use_build_context_synchronously
         context,
-      ).showSnackBar(SnackBar(content: Text('Submitted Successfully')));
+      ).showSnackBar(
+        SnackBar(
+          content: Text('Submitted Successfully'),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
 
       _formKey.currentState!.reset();
     } catch (e) {

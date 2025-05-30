@@ -21,7 +21,6 @@ class Testimonial extends StatefulWidget {
 
 class TestimonialPageState extends State<Testimonial> {
   final CardSwiperController controller = CardSwiperController();
-
   List<Widget> cards = [];
 
   @override
@@ -31,11 +30,10 @@ class TestimonialPageState extends State<Testimonial> {
       cards = List.generate(
         widget.candidates.length,
         (index) => DaitngProfileCard(
-          assetPath: widget.assetPaths[index % widget.assetPaths.length],
           candidate: widget.candidates[index],
           controller: controller,
         ),
-      ).toList();
+      );
     });
   }
 
@@ -48,13 +46,14 @@ class TestimonialPageState extends State<Testimonial> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Stack(
         children: [
           Positioned.fill(
             child: CardSwiper(
               controller: controller,
-              cardsCount: 20,
-              maxAngle: 80,
+              cardsCount: cards.length,
+              maxAngle: 20,
               initialIndex: widget.initialIndex,
               allowedSwipeDirection: AllowedSwipeDirection.only(
                 left: true,
@@ -83,15 +82,14 @@ class TestimonialPageState extends State<Testimonial> {
               behavior: HitTestBehavior.translucent,
               child: Container(
                 decoration: BoxDecoration(
-                  // ignore: deprecated_member_use
-                  color: Colors.black.withOpacity(0.4),
+                  color: Theme.of(context).textTheme.titleLarge?.color,
                   borderRadius: BorderRadius.circular(30),
                 ),
                 padding: const EdgeInsets.all(13),
                 child: Icon(
                   CupertinoIcons.chevron_back,
                   size: 25,
-                  color: Colors.white,
+                  color: Theme.of(context).scaffoldBackgroundColor,
                 ),
               ),
             ),
@@ -102,22 +100,11 @@ class TestimonialPageState extends State<Testimonial> {
   }
 }
 
-class ProfileScrollingPage extends StatelessWidget {
-  const ProfileScrollingPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
-
 class DaitngProfileCard extends StatelessWidget {
   final CardSwiperController controller;
-  final String assetPath;
   final SwipeTestimonail candidate;
 
   const DaitngProfileCard({
-    required this.assetPath,
     required this.candidate,
     required this.controller,
     super.key,
@@ -126,156 +113,89 @@ class DaitngProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(Radius.circular(30)),
+        borderRadius: BorderRadius.all(Radius.circular(30)),
+        color: Theme.of(context).scaffoldBackgroundColor,
       ),
-      child: Stack(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Positioned.fill(child: Image.asset(assetPath, fit: BoxFit.cover)),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              height: 320,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    // ignore: deprecated_member_use
-                    Colors.black.withOpacity(0),
-                    // ignore: deprecated_member_use
-                    Colors.black.withOpacity(0.75),
-                    // ignore: deprecated_member_use
-                    Colors.black.withOpacity(1),
-                  ],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-              ),
+          // const Spacer(),
+          SizedBox(height: 170),
+          Text(
+            '${candidate.name},',
+            style: TextStyle(
+              color: Theme.of(context).textTheme.titleLarge?.color,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 10,
-            child: Container(
-              height: 320,
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        '${candidate.name}, ${candidate.age}',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      if (candidate.isOnline)
-                        Container(
-                          width: 8,
-                          height: 8,
-                          decoration: BoxDecoration(
-                            color: Colors.lightGreen,
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                        ),
-                    ],
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    '${candidate.distanceInFt}ft from you',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    'Bio',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  Text(
-                    candidate.bio,
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      // ignore: deprecated_member_use
-                      color: Colors.white.withOpacity(0.8),
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
-                      height: 1.1,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () {
-                            vibrateIfEnabled(context);
-                            controller.swipe(CardSwiperDirection.left);
-                          },
-                          behavior: HitTestBehavior.translucent,
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: Theme.of(
-                                context,
-                              ).textTheme.titleLarge?.color,
-                              borderRadius: BorderRadius.circular(25),
-                            ),
-                            child: Icon(
-                              CupertinoIcons.chevron_back,
-                              color: Theme.of(context).scaffoldBackgroundColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: GestureDetector(
-                          behavior: HitTestBehavior.translucent,
-                          onTap: () {
-                            vibrateIfEnabled(context);
-                            controller.swipe(CardSwiperDirection.right);
-                          },
-                          // onTap: () =>
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: Theme.of(
-                                context,
-                              ).textTheme.titleLarge?.color,
-                              borderRadius: BorderRadius.circular(25),
-                            ),
-                            child: Icon(
-                              CupertinoIcons.chevron_forward,
-                              color: Theme.of(context).scaffoldBackgroundColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+          const SizedBox(height: 10),
+          Text(
+            'MCA',
+            style: TextStyle(
+              color: Theme.of(context).textTheme.titleLarge?.color,
+              fontSize: 22,
+              fontWeight: FontWeight.w400,
             ),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            candidate.bio,
+            maxLines: 20,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              color: Theme.of(context).textTheme.titleLarge?.color,
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+              height: 1.3,
+            ),
+          ),
+          const SizedBox(height: 70),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: () {
+                    vibrateIfEnabled(context);
+                    controller.swipe(CardSwiperDirection.left);
+                  },
+                  child: Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).textTheme.titleLarge?.color,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Icon(
+                      CupertinoIcons.chevron_back,
+                      color: Theme.of(context).scaffoldBackgroundColor,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: GestureDetector(
+                  onTap: () {
+                    vibrateIfEnabled(context);
+                    controller.swipe(CardSwiperDirection.right);
+                  },
+                  child: Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).textTheme.titleLarge?.color,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Icon(
+                      CupertinoIcons.chevron_forward,
+                      color: Theme.of(context).scaffoldBackgroundColor,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),

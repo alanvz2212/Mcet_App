@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:musaliarapp/utils/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:musaliarapp/vibration/vibration_helper.dart';
 
 class DepmechHomePage extends StatelessWidget {
   const DepmechHomePage({super.key});
@@ -9,119 +11,146 @@ class DepmechHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: ListView(
-          padding: const EdgeInsets.only(bottom: 50),
-          children: [
-            const SizedBox(height: 80),
-            const SizedBox(height: 40),
-            Text(
-              'Department of Computer Applications',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 35),
-            Container(
-              height: 1.7,
-              width: double.infinity,
-              margin: const EdgeInsets.symmetric(horizontal: 1),
-              decoration: BoxDecoration(
-                // ignore: deprecated_member_use
-                color: Theme.of(context).textTheme.titleLarge?.color,
-                borderRadius: BorderRadius.circular(100),
-              ),
-            ),
-            const SizedBox(height: 35),
-            Text(
-              'ABOUT THE DEPARTMENT',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-                fontFamily: 'SecondaSoft',
-                color: MyColors.grey,
-              ),
-            ),
-            const SizedBox(height: 11),
-            Text(
-              'Innovation, Knowledge, Excellence',
-              style: TextStyle(
-                fontSize: 21,
-                fontWeight: FontWeight.w500,
-                fontFamily: 'SecondaSoft',
-                color: MyColors.blue,
-              ),
-            ),
-            Text(
-              'Here are the Faculty Members.',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
-                fontFamily: 'SecondaSoft',
-              ),
-            ),
-            const SizedBox(height: 15),
-            Container(
-              height: SizeExtension(600).h,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Theme.of(context).scaffoldBackgroundColor,
-                borderRadius: BorderRadius.circular(SizeExtension(40).r),
-              ),
-              padding: EdgeInsets.only(
-                top: SizeExtension(30).h,
-                left: SizeExtension(20).w,
-                right: SizeExtension(20).w,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(padding: EdgeInsets.only(bottom: SizeExtension(8).h)),
-                  buildPersonTile(
-                    name: 'Ms Shyma Kareem (HOD)',
-                    subtitle: 'shymshiju@gmail.com',
-                    context: context,
+      body: Stack(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: ListView(
+              children: [
+                SizedBox(height: 80),
+                SizedBox(height: 40),
+                Text(
+                  'Department of Civil Engineering',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 35),
+                Container(
+                  height: 1.7,
+                  width: double.infinity,
+                  margin: const EdgeInsets.symmetric(horizontal: 1),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).textTheme.titleLarge?.color,
+                    borderRadius: BorderRadius.circular(100),
                   ),
-                  buildPersonTile(
-                    name: 'Ms Jogimol Joseph',
-                    subtitle: 'jogimolb@gmail.com',
-                    context: context,
+                ),
+                const SizedBox(height: 35),
+                Text(
+                  'About the Department',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'SecondaSoft',
+                    color: MyColors.grey,
                   ),
-                  buildPersonTile(
-                    name: 'Ms Sindhu Daniel',
-                    subtitle: 'sindhudaniel@yahoo.com',
-                    context: context,
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  'The Department of Mechanical Engineering, established with an initial intake of 30 students and expanded in 2010, offers advanced lab facilities and a department library. It emphasizes academic excellence, research, and holistic development through guest lectures, industrial visits, and workshops. Faculty and students actively engage in emerging technological areas and conferences.',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'SecondaSoft',
+                    color: MyColors.blue,
                   ),
-                  buildPersonTile(
-                    name: 'Ms Rinsa Rees',
-                    subtitle: 'rinsa.rees@gmail.com',
-                    context: context,
+                ),
+                const SizedBox(height: 35),
+                Text(
+                  'Here are the Faculty Members.',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'SecondaSoft',
                   ),
-                  buildPersonTile(
-                    name: 'Ms Preethi Thomas',
-                    subtitle: '',
-                    context: context,
+                ),
+                Container(
+                  height: SizeExtension(800).h,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).scaffoldBackgroundColor,
+                    borderRadius: BorderRadius.circular(SizeExtension(40).r),
                   ),
-                ],
-              ),
-            ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      buildPersonTile(
+                        name: 'Prof Madhu G (HOD)',
+                        subtitle: 'madhug@musaliarcollege.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'Ms Soumyalata D',
+                        subtitle: 'soumya@musaliarcollege.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'Ms Smitha G Nair',
+                        subtitle: 'sindhudaniel@yahoo.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'Ms Rinsa Rees',
+                        subtitle: 'rinsa.rees@gmail.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'Ms Preethi Thomas',
+                        subtitle: '',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'Ms Shyma Kareem (HOD)',
+                        subtitle: 'shymshiju@gmail.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'Ms Shyma Kareem (HOD)',
+                        subtitle: 'shymshiju@gmail.com',
+                        context: context,
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  'WORKSHOPS CONDUCTED',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w300,
+                    fontFamily: 'SecondaSoft',
+                  ),
+                ),
+                const SizedBox(height: 15),
 
-            const SizedBox(height: 5),
-            Text(
-              'WORKSHOPS CONDUCTED',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w300,
-                fontFamily: 'SecondaSoft',
+                CollectionsWidget(
+                  assetPath: 'assets/images/sindhu_mis_workshop.jpg',
+                ),
+                const SizedBox(height: 10),
+                CollectionsWidget(assetPath: 'assets/images/5.jpg'),
+                const SizedBox(height: 30),
+              ],
+            ),
+          ),
+          Positioned(
+            top: 62,
+            left: 20,
+            child: GestureDetector(
+              onTap: () {
+                vibrateIfEnabled(context);
+                Navigator.pop(context);
+              },
+              child: Container(
+                padding: const EdgeInsets.all(11),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).textTheme.titleLarge?.color,
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                child: Icon(
+                  CupertinoIcons.chevron_back,
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                ),
               ),
             ),
-            const SizedBox(height: 15),
-            CollectionsWidget(
-              assetPath: 'assets/images/sindhu_mis_workshop.jpg',
-            ),
-            const SizedBox(height: 10),
-            CollectionsWidget(assetPath: 'assets/images/5.jpg'),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

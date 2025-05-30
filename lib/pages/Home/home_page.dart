@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:musaliarapp/home_page_widgets/header_widget.dart';
+import 'package:musaliarapp/pages/Circle_Events/small_events1.dart';
+import 'package:musaliarapp/pages/Circle_Events/small_events2.dart';
+import 'package:musaliarapp/pages/Circle_Events/small_events3.dart';
+import 'package:musaliarapp/pages/Circle_Events/small_events4.dart';
+import 'package:musaliarapp/pages/Circle_Events/small_events5.dart';
 import 'package:musaliarapp/pages/Testimonals/testimonial.dart';
 import 'package:musaliarapp/pages/departments/cs_dept/dep_landing_page.dart';
 import 'package:musaliarapp/pages/departments/ece_dep/dep_landing_page.dart';
@@ -87,18 +91,68 @@ class _HomePageState extends State<HomePage> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     padding: EdgeInsets.only(left: SizeExtension(20).w),
-                    children: List.generate(
-                      5,
-                      (index) => GestureDetector(
+                    children: [
+                      GestureDetector(
                         onTap: () {
                           vibrateIfEnabled(context);
-                          if (kDebugMode) {
-                            print('Tapped on circle ${index + 1}');
-                          }
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SmallEvents1(),
+                            ),
+                          );
                         },
                         child: buildCircle('assets/images/3.jpg'),
                       ),
-                    ),
+                      GestureDetector(
+                        onTap: () {
+                          vibrateIfEnabled(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SmallEvents2(),
+                            ),
+                          );
+                        },
+                        child: buildCircle('assets/images/3.jpg'),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          vibrateIfEnabled(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SmallEvents3(),
+                            ),
+                          );
+                        },
+                        child: buildCircle('assets/images/3.jpg'),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          vibrateIfEnabled(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SmallEvents4(),
+                            ),
+                          );
+                        },
+                        child: buildCircle('assets/images/3.jpg'),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          vibrateIfEnabled(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SmallEvents5(),
+                            ),
+                          );
+                        },
+                        child: buildCircle('assets/images/3.jpg'),
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(height: SizeExtension(30).h),

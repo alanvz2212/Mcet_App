@@ -1,19 +1,8 @@
-import 'dart:math';
-
 class SwipeTestimonail {
   final String name;
-  final int distanceInFt;
-  final int age;
-  final bool isOnline;
   final String bio;
 
-  const SwipeTestimonail({
-    required this.name,
-    required this.distanceInFt,
-    required this.isOnline,
-    required this.age,
-    required this.bio,
-  });
+  const SwipeTestimonail({required this.name, required this.bio});
 
   static List<String> getAssetPaths() {
     final list = List.generate(
@@ -27,114 +16,76 @@ class SwipeTestimonail {
   static List<SwipeTestimonail> getCandidates() {
     List<SwipeTestimonail> candidates = [
       SwipeTestimonail(
-        name: '',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
+        name: 'Krishnan Unni',
         bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
-
-        // hobbies: _getShuffledHobies(),
+            'Choosing MCET was one of the best decisions '
+            'I’ve made. The college emphasized both '
+            'technical learning and personal growth. '
+            'I was encouraged to take part in paper '
+            'presentations, workshops, and coding contests, '
+            'which enhanced my skills. The industry exposure '
+            'I received through guest lectures and internships '
+            'gave me clarity on my career path. Thanks to MCET’s '
+            'strong academic culture, I graduated with '
+            'confidence and a clear vision for the future. ',
       ),
       SwipeTestimonail(
-        name: 'Jane',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
+        name: 'Lancy Biji',
         bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
+            'MCET shaped me into a confident professional '
+            'ready to take on the world. The placement '
+            'training was excellent, and the mock interviews '
+            'helped me prepare well. Beyond academics, the '
+            'campus environment encouraged creativity and '
+            'leadership through clubs and events. Faculty '
+            'were approachable and always pushed us to do '
+            'our best. My time at MCET helped me discover '
+            'my strengths and build lasting friendships, '
+            'making it an unforgettable chapter of my life. ',
       ),
       SwipeTestimonail(
-        name: 'Katie',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
+        name: 'Aisha Sidhiq',
         bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
+            'MCET provided a platform where I could '
+            'grow both academically and socially. '
+            'The mentorship from experienced faculty '
+            'and the support during project work were '
+            'incredibly valuable. The college focused '
+            ' equally on soft skills, which helped during '
+            'interviews and group discussions. Campus '
+            'placements were well-organized, bringing '
+            'in top companies. Looking back, I realize '
+            ' how much this institution helped shape my '
+            'confidence and character. I carry the '
+            'lessons from MCET wherever I go. ',
       ),
       SwipeTestimonail(
-        name: 'Emily',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
+        name: 'Muhammed Haja',
         bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
+            'MCET offered more than just a degree it '
+            'offered a direction. The focus on practical '
+            'learning, through labs and real-world '
+            'projects, helped me apply classroom concepts '
+            'effectively. The seminars, guest lectures, '
+            'and tech fests kept me updated with the industry. '
+            ' Faculty always supported my ambitions and '
+            'gave me the freedom to explore ideas. The '
+            'atmosphere was always positive and inspiring, '
+            'and I’m proud to be an alumnus of MCET. ',
       ),
       SwipeTestimonail(
-        name: 'Diana',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
+        name: 'Shana Sherafudeen',
         bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
-      ),
-      SwipeTestimonail(
-        name: 'Samantha',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
-        bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
-      ),
-      SwipeTestimonail(
-        name: 'Isabella',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
-        bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
-      ),
-      SwipeTestimonail(
-        name: 'Ella',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
-        bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
-      ),
-      SwipeTestimonail(
-        name: 'Olivia',
-        distanceInFt: Random.secure().nextInt(50) + 100,
-        age: Random.secure().nextInt(10) + 25,
-        isOnline: Random.secure().nextBool(),
-        bio:
-            'I\'m a cool person with a lot of hobbies. '
-            'I like to hike, read, swim, draw, model, and design. '
-            'In my free time, I like to go out and have fun with my friends. '
-            'I\'m looking for someone who shares my interests and is'
-            ' looking for a serious relationship.',
+            'At MCET, I found a perfect balance between '
+            'academics and extracurriculars. The college '
+            'pushed me to challenge myself and step out '
+            ' of my comfort zone. I loved being part of '
+            'tech events and project expos that added so '
+            'much to my learning experience. MCET’s '
+            'dedication to student growth made a huge '
+            'impact on my career and confidence. It’s a '
+            'place that nurtures talent and turns students '
+            'into professionals.',
       ),
     ];
 
