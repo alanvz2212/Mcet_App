@@ -1,12 +1,9 @@
-
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/pages/Home/home_page.dart';
 import 'package:musaliarapp/utils/colors.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
-
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -43,7 +40,7 @@ class _LandingPageState extends State<LandingPage> {
             child: AnimatedOpacity(
               duration: Duration(milliseconds: 300),
               opacity: _selectedIndex == 1 ? 1 : 0,
-              child: Image.asset('assets/images/3.jpg', fit: BoxFit.cover),
+              child: Image.asset('assets/images/colg.jpg', fit: BoxFit.cover),
             ),
           ),
           Positioned.fill(
@@ -82,13 +79,20 @@ class _LandingPageState extends State<LandingPage> {
           ),
           Positioned.fill(
             child: Padding(
-              padding: EdgeInsets.only(left: SizeExtension(20).w, bottom: SizeExtension(40).h, right: SizeExtension(20).w),
+              padding: EdgeInsets.only(
+                left: SizeExtension(20).w,
+                bottom: SizeExtension(40).h,
+                right: SizeExtension(20).w,
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: SizeExtension(10).w, right: SizeExtension(20).w),
+                    padding: EdgeInsets.only(
+                      left: SizeExtension(10).w,
+                      right: SizeExtension(20).w,
+                    ),
                     child: Text(
                       'Your dreams begin here, at Musaliar College.',
                       maxLines: 5,
@@ -117,37 +121,46 @@ class _LandingPageState extends State<LandingPage> {
                             children: [
                               AnimatedContainer(
                                 duration: Duration(milliseconds: 100),
-                                width: _selectedIndex == 0 ? SizeExtension(42).w : SizeExtension(27).w,
+                                width: _selectedIndex == 0
+                                    ? SizeExtension(42).w
+                                    : SizeExtension(27).w,
                                 decoration: BoxDecoration(
-                                  color:
-                                      _selectedIndex == 0
-                                          ? MyColors.white
-                                          : MyColors.grey,
-                                  borderRadius: BorderRadius.circular(SizeExtension(5).r),
+                                  color: _selectedIndex == 0
+                                      ? MyColors.white
+                                      : MyColors.grey,
+                                  borderRadius: BorderRadius.circular(
+                                    SizeExtension(5).r,
+                                  ),
                                 ),
                               ),
                               SizedBox(width: SizeExtension(6).w),
                               AnimatedContainer(
                                 duration: Duration(milliseconds: 100),
-                                width: _selectedIndex == 1 ? SizeExtension(42).w : SizeExtension(27).w,
+                                width: _selectedIndex == 1
+                                    ? SizeExtension(42).w
+                                    : SizeExtension(27).w,
                                 decoration: BoxDecoration(
-                                  color:
-                                      _selectedIndex == 1
-                                          ? MyColors.white
-                                          : MyColors.grey,
-                                  borderRadius: BorderRadius.circular(SizeExtension(5).r),
+                                  color: _selectedIndex == 1
+                                      ? MyColors.white
+                                      : MyColors.grey,
+                                  borderRadius: BorderRadius.circular(
+                                    SizeExtension(5).r,
+                                  ),
                                 ),
                               ),
                               SizedBox(width: SizeExtension(6).w),
                               AnimatedContainer(
                                 duration: Duration(milliseconds: 100),
-                                width: _selectedIndex == 2 ? SizeExtension(42).w : SizeExtension(27).w,
+                                width: _selectedIndex == 2
+                                    ? SizeExtension(42).w
+                                    : SizeExtension(27).w,
                                 decoration: BoxDecoration(
-                                  color:
-                                      _selectedIndex == 2
-                                          ? MyColors.white
-                                          : MyColors.grey,
-                                  borderRadius: BorderRadius.circular(SizeExtension(5).r),
+                                  color: _selectedIndex == 2
+                                      ? MyColors.white
+                                      : MyColors.grey,
+                                  borderRadius: BorderRadius.circular(
+                                    SizeExtension(5).r,
+                                  ),
                                 ),
                               ),
                             ],
@@ -182,7 +195,7 @@ class _LandingPageState extends State<LandingPage> {
                                           255,
                                           255,
                                           255,
-                                        // ignore: deprecated_member_use
+                                          // ignore: deprecated_member_use
                                         ).withOpacity(0.3),
                                         borderRadius: BorderRadius.circular(
                                           SizeExtension(20).r,
@@ -204,7 +217,9 @@ class _LandingPageState extends State<LandingPage> {
                                         255,
                                         255,
                                       ),
-                                      borderRadius: BorderRadius.circular(SizeExtension(20).r),
+                                      borderRadius: BorderRadius.circular(
+                                        SizeExtension(20).r,
+                                      ),
                                     ),
                                     alignment: Alignment.center,
                                     child: Text(
