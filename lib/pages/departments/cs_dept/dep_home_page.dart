@@ -20,7 +20,7 @@ class DepcsHomePage extends StatelessWidget {
                 SizedBox(height: 80),
                 SizedBox(height: 40),
                 Text(
-                  'Department of Civil Engineering',
+                  'Department of Computer Science & Engineering',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 35),
@@ -73,22 +73,22 @@ class DepcsHomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       buildPersonTile(
-                        name: 'Ms Shyma Kareem (HOD)',
-                        subtitle: 'shymshiju@gmail.com',
+                        name: 'Dr Shine Raj G (HOD)',
+                        subtitle: 'igshiner@gmail.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Jogimol Joseph',
-                        subtitle: 'jogimolb@gmail.com',
+                        name: 'Ms Harsha Pushpan',
+                        subtitle: 'harshapushpan19@gmail.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Sindhu Daniel',
-                        subtitle: 'sindhudaniel@yahoo.com',
+                        name: 'Ms Athira B',
+                        subtitle: '',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Rinsa Rees',
+                        name: 'Ms Rajeena Rahman',
                         subtitle: 'rinsa.rees@gmail.com',
                         context: context,
                       ),

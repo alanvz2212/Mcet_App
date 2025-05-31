@@ -72,7 +72,7 @@ class TestimonialPageState extends State<Testimonial> {
             ),
           ),
           Positioned(
-            top: 50,
+            top: 62,
             left: 20,
             child: GestureDetector(
               onTap: () {
@@ -83,7 +83,7 @@ class TestimonialPageState extends State<Testimonial> {
               child: Container(
                 decoration: BoxDecoration(
                   color: Theme.of(context).textTheme.titleLarge?.color,
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(40),
                 ),
                 padding: const EdgeInsets.all(13),
                 child: Icon(

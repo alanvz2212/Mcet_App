@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/utils/colors.dart';
@@ -83,7 +82,7 @@ class SavingsCardWidget extends StatelessWidget {
             ),
             Container(
               height: SizeExtension(10).h,
-              width: SizeExtension(135).w,
+              width: SizeExtension(400).w,
               decoration: BoxDecoration(
                 // ignore: deprecated_member_use
                 color: MyColors.grey.withOpacity(.9),
