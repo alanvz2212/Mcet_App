@@ -20,7 +20,7 @@ class DepmcaHomePage extends StatelessWidget {
                 SizedBox(height: 80),
                 SizedBox(height: 40),
                 Text(
-                  'Department of Civil Engineering',
+                  'Department of MCA',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 35),
@@ -40,7 +40,7 @@ class DepmcaHomePage extends StatelessWidget {
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
-                    color: MyColors.grey,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -55,8 +55,9 @@ class DepmcaHomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 35),
                 Text(
-                  'Here are the Faculty Members.',
+                  'Here are the Faculty Members',
                   style: TextStyle(
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
@@ -103,6 +104,7 @@ class DepmcaHomePage extends StatelessWidget {
                 Text(
                   'WORKSHOPS CONDUCTED',
                   style: TextStyle(
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                     fontSize: 18,
                     fontWeight: FontWeight.w300,
                     fontFamily: 'SecondaSoft',

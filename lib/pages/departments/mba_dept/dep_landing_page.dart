@@ -100,29 +100,20 @@ class DepmbaLandingPage extends StatelessWidget {
                     color: MyColors.blue,
                   ),
                 ),
+                const SizedBox(height: 10),
                 Text(
-                  'Master\'s of',
+                  'Master\'s of Business',
                   style: TextStyle(
-                    fontSize: 34,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).textTheme.titleLarge?.color,
                     letterSpacing: -.2,
-                  ),
-                ),
-                Text(
-                  'Business',
-                  style: TextStyle(
-                    fontSize: 34,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).textTheme.titleLarge?.color,
-                    letterSpacing: -.2,
-                    height: 1,
                   ),
                 ),
                 Text(
                   'Administration',
                   style: TextStyle(
-                    fontSize: 34,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).textTheme.titleLarge?.color,
                     letterSpacing: -.2,
@@ -137,7 +128,7 @@ class DepmbaLandingPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 19,
                     fontWeight: FontWeight.w500,
-                    color: MyColors.grey,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                     letterSpacing: -.3,
                   ),
                 ),

@@ -20,7 +20,7 @@ class DepmechHomePage extends StatelessWidget {
                 SizedBox(height: 80),
                 SizedBox(height: 40),
                 Text(
-                  'Department of Civil Engineering',
+                  'Department of Mechanical Engineering',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 35),
@@ -40,7 +40,7 @@ class DepmechHomePage extends StatelessWidget {
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
-                    color: MyColors.grey,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -55,8 +55,9 @@ class DepmechHomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 35),
                 Text(
-                  'Here are the Faculty Members.',
+                  'Here are the Faculty Members',
                   style: TextStyle(
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
@@ -113,18 +114,18 @@ class DepmechHomePage extends StatelessWidget {
                 Text(
                   'WORKSHOPS CONDUCTED',
                   style: TextStyle(
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                     fontSize: 18,
                     fontWeight: FontWeight.w300,
                     fontFamily: 'SecondaSoft',
                   ),
                 ),
                 const SizedBox(height: 15),
-
-                CollectionsWidget(
-                  assetPath: 'assets/images/sindhu_mis_workshop.jpg',
-                ),
+                CollectionsWidget(assetPath: 'assets/images/mech_worksh.jpg'),
                 const SizedBox(height: 10),
-                CollectionsWidget(assetPath: 'assets/images/5.jpg'),
+                CollectionsWidget(assetPath: 'assets/images/mech_workshop.jpg'),
+                const SizedBox(height: 10),
+                CollectionsWidget(assetPath: 'assets/images/mech2_worshop.jpg'),
                 const SizedBox(height: 30),
               ],
             ),

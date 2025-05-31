@@ -100,19 +100,11 @@ class DepeeeLandingPage extends StatelessWidget {
                     color: MyColors.blue,
                   ),
                 ),
-                Text(
-                  'Department of',
-                  style: TextStyle(
-                    fontSize: 34,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).textTheme.titleLarge?.color,
-                    letterSpacing: -.2,
-                  ),
-                ),
+                const SizedBox(height: 10),
                 Text(
                   'Electrical & Electronics',
                   style: TextStyle(
-                    fontSize: 34,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).textTheme.titleLarge?.color,
                     letterSpacing: -.2,
@@ -122,7 +114,7 @@ class DepeeeLandingPage extends StatelessWidget {
                 Text(
                   'Engineering',
                   style: TextStyle(
-                    fontSize: 34,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).textTheme.titleLarge?.color,
                     letterSpacing: -.2,
@@ -137,7 +129,7 @@ class DepeeeLandingPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 19,
                     fontWeight: FontWeight.w500,
-                    color: MyColors.grey,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                     letterSpacing: -.3,
                   ),
                 ),
