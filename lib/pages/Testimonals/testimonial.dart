@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
 import 'package:musaliarapp/widgets_3/swipe_testimonail.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Testimonial extends StatefulWidget {
   final List<SwipeTestimonail> candidates;
@@ -45,6 +46,9 @@ class TestimonialPageState extends State<Testimonial> {
 
   @override
   Widget build(BuildContext context) {
+    // Initialize ScreenUtil here or in main.dart if not already done
+    ScreenUtil.init(context, designSize: const Size(375, 812));
+
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Stack(
@@ -61,7 +65,7 @@ class TestimonialPageState extends State<Testimonial> {
               ),
               numberOfCardsDisplayed: 3,
               backCardOffset: const Offset(0, 0),
-              padding: const EdgeInsets.all(0),
+              padding: EdgeInsets.zero,
               cardBuilder:
                   (
                     context,
@@ -72,8 +76,8 @@ class TestimonialPageState extends State<Testimonial> {
             ),
           ),
           Positioned(
-            top: 62,
-            left: 20,
+            top: 62.h,
+            left: 20.w,
             child: GestureDetector(
               onTap: () {
                 vibrateIfEnabled(context);
@@ -83,12 +87,12 @@ class TestimonialPageState extends State<Testimonial> {
               child: Container(
                 decoration: BoxDecoration(
                   color: Theme.of(context).textTheme.titleLarge?.color,
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(40.r),
                 ),
-                padding: const EdgeInsets.all(13),
+                padding: EdgeInsets.all(13.r),
                 child: Icon(
                   CupertinoIcons.chevron_back,
-                  size: 25,
+                  size: 25.sp,
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
               ),
@@ -114,45 +118,44 @@ class DaitngProfileCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(30)),
+        borderRadius: BorderRadius.all(Radius.circular(30.r)),
         color: Theme.of(context).scaffoldBackgroundColor,
       ),
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(20.r),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // const Spacer(),
-          SizedBox(height: 170),
+          SizedBox(height: 170.h),
           Text(
             '${candidate.name},',
             style: TextStyle(
               color: Theme.of(context).textTheme.titleLarge?.color,
-              fontSize: 24,
+              fontSize: 24.sp,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           Text(
             'MCA',
             style: TextStyle(
               color: Theme.of(context).textTheme.titleLarge?.color,
-              fontSize: 22,
+              fontSize: 22.sp,
               fontWeight: FontWeight.w400,
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           Text(
             candidate.bio,
             maxLines: 20,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
               color: Theme.of(context).textTheme.titleLarge?.color,
-              fontSize: 20,
+              fontSize: 20.sp,
               fontWeight: FontWeight.w400,
               height: 1.3,
             ),
           ),
-          const SizedBox(height: 70),
+          SizedBox(height: 70.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -163,10 +166,10 @@ class DaitngProfileCard extends StatelessWidget {
                     controller.swipe(CardSwiperDirection.left);
                   },
                   child: Container(
-                    height: 50,
+                    height: 50.h,
                     decoration: BoxDecoration(
                       color: Theme.of(context).textTheme.titleLarge?.color,
-                      borderRadius: BorderRadius.circular(25),
+                      borderRadius: BorderRadius.circular(25.r),
                     ),
                     child: Icon(
                       CupertinoIcons.chevron_back,
@@ -175,7 +178,7 @@ class DaitngProfileCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: 10.w),
               Expanded(
                 child: GestureDetector(
                   onTap: () {
@@ -183,10 +186,10 @@ class DaitngProfileCard extends StatelessWidget {
                     controller.swipe(CardSwiperDirection.right);
                   },
                   child: Container(
-                    height: 50,
+                    height: 50.h,
                     decoration: BoxDecoration(
                       color: Theme.of(context).textTheme.titleLarge?.color,
-                      borderRadius: BorderRadius.circular(25),
+                      borderRadius: BorderRadius.circular(25.r),
                     ),
                     child: Icon(
                       CupertinoIcons.chevron_forward,

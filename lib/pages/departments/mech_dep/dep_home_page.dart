@@ -14,61 +14,64 @@ class DepmechHomePage extends StatelessWidget {
       body: Stack(
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: ListView(
               children: [
-                SizedBox(height: 80),
-                SizedBox(height: 40),
+                SizedBox(height: 80.h),
+                SizedBox(height: 40.h),
                 Text(
                   'Department of Mechanical Engineering',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 35),
-                Container(
-                  height: 1.7,
-                  width: double.infinity,
-                  margin: const EdgeInsets.symmetric(horizontal: 1),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).textTheme.titleLarge?.color,
-                    borderRadius: BorderRadius.circular(100),
+                  style: TextStyle(
+                    fontSize: 30.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 35),
+                SizedBox(height: 35.h),
+                Container(
+                  height: 1.7.h,
+                  width: double.infinity,
+                  margin: EdgeInsets.symmetric(horizontal: 1.w),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).textTheme.titleLarge?.color,
+                    borderRadius: BorderRadius.circular(100.r),
+                  ),
+                ),
+                SizedBox(height: 35.h),
                 Text(
                   'About the Department',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
                     color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Text(
                   'The Department of Mechanical Engineering, established with an initial intake of 30 students and expanded in 2010, offers advanced lab facilities and a department library. It emphasizes academic excellence, research, and holistic development through guest lectures, industrial visits, and workshops. Faculty and students actively engage in emerging technological areas and conferences.',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 17.sp,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
                     color: MyColors.blue,
                   ),
                 ),
-                const SizedBox(height: 35),
+                SizedBox(height: 35.h),
                 Text(
                   'Here are the Faculty Members',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
                   ),
                 ),
                 Container(
-                  height: SizeExtension(800).h,
+                  height: 800.h,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Theme.of(context).scaffoldBackgroundColor,
-                    borderRadius: BorderRadius.circular(SizeExtension(40).r),
+                    borderRadius: BorderRadius.circular(40.r),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -115,34 +118,34 @@ class DepmechHomePage extends StatelessWidget {
                   'WORKSHOPS CONDUCTED',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    fontSize: 18,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.w300,
                     fontFamily: 'SecondaSoft',
                   ),
                 ),
-                const SizedBox(height: 15),
+                SizedBox(height: 15.h),
                 CollectionsWidget(assetPath: 'assets/images/mech_worksh.jpg'),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 CollectionsWidget(assetPath: 'assets/images/mech_workshop.jpg'),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 CollectionsWidget(assetPath: 'assets/images/mech2_worshop.jpg'),
-                const SizedBox(height: 30),
+                SizedBox(height: 30.h),
               ],
             ),
           ),
           Positioned(
-            top: 62,
-            left: 20,
+            top: 62.h,
+            left: 20.w,
             child: GestureDetector(
               onTap: () {
                 vibrateIfEnabled(context);
                 Navigator.pop(context);
               },
               child: Container(
-                padding: const EdgeInsets.all(11),
+                padding: EdgeInsets.all(11.r),
                 decoration: BoxDecoration(
                   color: Theme.of(context).textTheme.titleLarge?.color,
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(40.r),
                 ),
                 child: Icon(
                   CupertinoIcons.chevron_back,
@@ -164,11 +167,11 @@ class CollectionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 200.h,
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 1),
+      margin: EdgeInsets.symmetric(horizontal: 1.w),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
         child: Image.asset(assetPath, fit: BoxFit.cover),
       ),
     );
@@ -182,28 +185,28 @@ Widget buildPersonTile({
   Icon? icon,
 }) {
   return Container(
-    height: SizeExtension(100).h,
-    margin: EdgeInsets.only(bottom: SizeExtension(10).h),
+    height: 100.h,
+    margin: EdgeInsets.only(bottom: 10.h),
     child: Row(
       children: [
         SizedBox(
-          height: SizeExtension(100).h,
-          width: SizeExtension(0).w,
+          height: 100.h,
+          width: 0.w,
           child: Stack(
             children: [
               Positioned.fill(
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(SizeExtension(50).r),
+                    borderRadius: BorderRadius.circular(50.r),
                   ),
-                  padding: EdgeInsets.all(SizeExtension(18).r),
+                  padding: EdgeInsets.all(18.r),
                   // child: Image.asset(image, fit: BoxFit.contain),
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(width: SizeExtension(15).w),
+        SizedBox(width: 15.w),
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -219,7 +222,7 @@ Widget buildPersonTile({
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: SizeExtension(4).h),
+              SizedBox(height: 4.h),
               Text(
                 subtitle,
                 overflow: TextOverflow.ellipsis,

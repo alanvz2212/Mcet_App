@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart'; // Make sure this is imported
 import 'package:musaliarapp/pages/departments/civil_dep/dep_home_page.dart';
 import 'package:musaliarapp/utils/colors.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
@@ -14,9 +15,9 @@ class DepcivilLandingPage extends StatelessWidget {
       body: Stack(
         children: [
           Positioned(
-            bottom: -10,
-            height: 460,
-            left: -10,
+            bottom: -10.h,
+            height: 460.h,
+            left: -10.w,
             right: 0,
             child: GestureDetector(
               onTap: () {
@@ -34,24 +35,23 @@ class DepcivilLandingPage extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 60,
-            left: 20,
+            top: 60.h,
+            left: 20.w,
             child: GestureDetector(
               onTap: () {
                 vibrateIfEnabled(context);
                 Navigator.pop(context);
               },
               child: Container(
-                padding: const EdgeInsets.only(
-                  left: 11,
-                  right: 12,
-                  top: 11,
-                  bottom: 11,
+                padding: EdgeInsets.only(
+                  left: 11.w,
+                  right: 12.w,
+                  top: 11.h,
+                  bottom: 11.h,
                 ),
                 decoration: BoxDecoration(
                   color: Theme.of(context).textTheme.titleLarge?.color,
-
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(40.r),
                 ),
                 child: Icon(
                   CupertinoIcons.chevron_back,
@@ -61,66 +61,66 @@ class DepcivilLandingPage extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 80,
-            left: 20,
-            right: 20,
+            top: 80.h,
+            left: 20.w,
+            right: 20.w,
             child: Column(
               children: [
                 SizedBox(
-                  height: 50,
+                  height: 50.h,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       SizedBox(
-                        height: 45,
-                        width: 45,
+                        height: 45.h,
+                        width: 45.w,
                         child: Stack(
                           children: [
                             Positioned(
-                              top: 0,
-                              right: 0,
-                              child: SizedBox(height: 12, width: 12),
+                              top: 0.h,
+                              right: 0.w,
+                              child: SizedBox(height: 12.h, width: 12.w),
                             ),
                           ],
                         ),
                       ),
-                      const SizedBox(width: 20),
-                      SizedBox(height: 50, width: 50),
+                      SizedBox(width: 20.w),
+                      SizedBox(height: 50.h, width: 50.w),
                     ],
                   ),
                 ),
                 Text(
                   'Welcome to ',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
-                    letterSpacing: 2,
+                    letterSpacing: 2.w,
                     color: MyColors.blue,
                   ),
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Text(
                   'Civil Engineering',
                   style: TextStyle(
-                    fontSize: 32,
+                    fontSize: 32.sp,
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    letterSpacing: -.2,
-                    height: 1,
+                    letterSpacing: -0.2.w,
+                    height: 1.h,
                   ),
                 ),
-                const SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Text(
                   'Design the structure, build the legacy.\nCivil Engineering lays the foundation for tomorrow’s world.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 19.sp,
                     fontWeight: FontWeight.w500,
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    letterSpacing: -.3,
+                    letterSpacing: -0.3.w,
                   ),
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
               ],
             ),
           ),

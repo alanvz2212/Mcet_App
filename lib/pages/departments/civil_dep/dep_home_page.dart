@@ -14,64 +14,64 @@ class DepcivilHomePage extends StatelessWidget {
       body: Stack(
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: ListView(
               children: [
-                SizedBox(height: 100),
+                SizedBox(height: 100.h),
                 Text(
                   'Department of Civil Engineering',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    fontSize: 30,
+                    fontSize: 30.sp,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 35),
+                SizedBox(height: 35.h),
                 Container(
-                  height: 1.7,
+                  height: 1.7.h,
                   width: double.infinity,
-                  margin: const EdgeInsets.symmetric(horizontal: 1),
+                  margin: EdgeInsets.symmetric(horizontal: 1.w),
                   decoration: BoxDecoration(
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    borderRadius: BorderRadius.circular(100),
+                    borderRadius: BorderRadius.circular(100.r),
                   ),
                 ),
-                const SizedBox(height: 35),
+                SizedBox(height: 35.h),
                 Text(
                   'About the Department',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
                     color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Text(
                   'The Department of Civil Engineering, established in 2004, offers quality education with experienced faculty and NAAC accreditation. It provides industry-linked activities, well-equipped labs, consultancy services, and strong student involvement in professional bodies, fostering technical skills, leadership, and sustainable engineering practices.',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 17.sp,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
                     color: MyColors.blue,
                   ),
                 ),
-                const SizedBox(height: 35),
+                SizedBox(height: 35.h),
                 Text(
                   'Here are the Faculty Members',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'SecondaSoft',
                   ),
                 ),
                 Container(
-                  height: SizeExtension(550).h,
+                  height: 550.h,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Theme.of(context).scaffoldBackgroundColor,
-                    borderRadius: BorderRadius.circular(SizeExtension(40).r),
+                    borderRadius: BorderRadius.circular(40.r),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,37 +108,36 @@ class DepcivilHomePage extends StatelessWidget {
                   'WORKSHOPS CONDUCTED',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    fontSize: 18,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.w300,
                     fontFamily: 'SecondaSoft',
                   ),
                 ),
-                const SizedBox(height: 15),
-
+                SizedBox(height: 15.h),
                 CollectionsWidget(
                   assetPath: 'assets/images/civil_workshop.jpg',
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 CollectionsWidget(
                   assetPath: 'assets/images/civil2_workshop.jpg',
                 ),
-                const SizedBox(height: 30),
+                SizedBox(height: 30.h),
               ],
             ),
           ),
           Positioned(
-            top: 62,
-            left: 20,
+            top: 62.h,
+            left: 20.w,
             child: GestureDetector(
               onTap: () {
                 vibrateIfEnabled(context);
                 Navigator.pop(context);
               },
               child: Container(
-                padding: const EdgeInsets.all(11),
+                padding: EdgeInsets.all(11.r),
                 decoration: BoxDecoration(
                   color: Theme.of(context).textTheme.titleLarge?.color,
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(40.r),
                 ),
                 child: Icon(
                   CupertinoIcons.chevron_back,
@@ -160,11 +159,11 @@ class CollectionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 200.h,
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 1),
+      margin: EdgeInsets.symmetric(horizontal: 1.w),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
         child: Image.asset(assetPath, fit: BoxFit.cover),
       ),
     );
@@ -178,28 +177,27 @@ Widget buildPersonTile({
   Icon? icon,
 }) {
   return Container(
-    height: SizeExtension(100).h,
-    margin: EdgeInsets.only(bottom: SizeExtension(10).h),
+    height: 100.h,
+    margin: EdgeInsets.only(bottom: 10.h),
     child: Row(
       children: [
         SizedBox(
-          height: SizeExtension(100).h,
-          width: SizeExtension(0).w,
+          height: 100.h,
+          width: 0.w, // Seems unused
           child: Stack(
             children: [
               Positioned.fill(
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(SizeExtension(50).r),
+                    borderRadius: BorderRadius.circular(50.r),
                   ),
-                  padding: EdgeInsets.all(SizeExtension(18).r),
-                  // child: Image.asset(image, fit: BoxFit.contain),
+                  padding: EdgeInsets.all(18.r),
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(width: SizeExtension(15).w),
+        SizedBox(width: 15.w),
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -215,7 +213,7 @@ Widget buildPersonTile({
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: SizeExtension(4).h),
+              SizedBox(height: 4.h),
               Text(
                 subtitle,
                 overflow: TextOverflow.ellipsis,
