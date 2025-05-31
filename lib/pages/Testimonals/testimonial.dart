@@ -46,9 +46,6 @@ class TestimonialPageState extends State<Testimonial> {
 
   @override
   Widget build(BuildContext context) {
-    // Initialize ScreenUtil here or in main.dart if not already done
-    ScreenUtil.init(context, designSize: const Size(375, 812));
-
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Stack(
@@ -64,8 +61,8 @@ class TestimonialPageState extends State<Testimonial> {
                 right: true,
               ),
               numberOfCardsDisplayed: 3,
-              backCardOffset: const Offset(0, 0),
-              padding: EdgeInsets.zero,
+              backCardOffset: Offset(0, 0),
+              padding: EdgeInsets.all(0),
               cardBuilder:
                   (
                     context,
@@ -121,7 +118,7 @@ class DaitngProfileCard extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(30.r)),
         color: Theme.of(context).scaffoldBackgroundColor,
       ),
-      padding: EdgeInsets.all(20.r),
+      padding: EdgeInsets.all(20.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
