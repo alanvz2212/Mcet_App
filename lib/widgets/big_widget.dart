@@ -17,7 +17,7 @@ class _BigWidgetState extends State<BigWidget> {
     'assets/images/Activity Dance.JPG',
     'assets/images/Convocation.JPG',
     'assets/images/Library 2.JPG',
-    'assets/images/WhatsApp Image 2019-06-10 at 09.28.27.jpeg',
+    'assets/images/candle.jpg',
     // Add more images if needed
   ];
 

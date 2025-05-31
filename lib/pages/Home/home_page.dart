@@ -1,11 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:musaliarapp/home_page_widgets/header_widget.dart';
-import 'package:musaliarapp/pages/Circle_Events/small_events1.dart';
-import 'package:musaliarapp/pages/Circle_Events/small_events2.dart';
-import 'package:musaliarapp/pages/Circle_Events/small_events3.dart';
-import 'package:musaliarapp/pages/Circle_Events/small_events4.dart';
-import 'package:musaliarapp/pages/Circle_Events/small_events5.dart';
 import 'package:musaliarapp/pages/Testimonals/testimonial.dart';
 import 'package:musaliarapp/pages/departments/cs_dept/dep_landing_page.dart';
 import 'package:musaliarapp/pages/departments/ece_dep/dep_landing_page.dart';
@@ -85,77 +80,19 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: SizeExtension(30).h),
                 BigWidget(),
-                SizedBox(height: SizeExtension(30).h),
+                SizedBox(height: SizeExtension(15).h),
                 SizedBox(
-                  height: SizeExtension(90).h,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    padding: EdgeInsets.only(left: SizeExtension(20).w),
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          vibrateIfEnabled(context);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SmallEvents1(),
-                            ),
-                          );
-                        },
-                        child: buildCircle('assets/images/3.jpg'),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          vibrateIfEnabled(context);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SmallEvents2(),
-                            ),
-                          );
-                        },
-                        child: buildCircle('assets/images/3.jpg'),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          vibrateIfEnabled(context);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SmallEvents3(),
-                            ),
-                          );
-                        },
-                        child: buildCircle('assets/images/3.jpg'),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          vibrateIfEnabled(context);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SmallEvents4(),
-                            ),
-                          );
-                        },
-                        child: buildCircle('assets/images/3.jpg'),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          vibrateIfEnabled(context);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SmallEvents5(),
-                            ),
-                          );
-                        },
-                        child: buildCircle('assets/images/3.jpg'),
-                      ),
-                    ],
+                  child: Text(
+                    'Mcet Crafts Excellence',
+                    style: TextStyle(
+                      fontSize: 23.sp,
+                      color: Theme.of(context).textTheme.titleLarge?.color,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: SizeExtension(30).h),
+                SizedBox(height: SizeExtension(15).h),
                 Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: SizeExtension(20).w,
@@ -167,6 +104,10 @@ class _HomePageState extends State<HomePage> {
                       width: double.infinity,
                       clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/mcet_pic.jpeg'),
+                        ),
                         color: Theme.of(context).textTheme.titleLarge?.color,
                         border: Border.all(
                           color: Theme.of(context).scaffoldBackgroundColor,
@@ -188,158 +129,6 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     );
                                   },
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: SizeExtension(140).w,
-                            margin: EdgeInsets.only(
-                              top: SizeExtension(7).h,
-                              right: SizeExtension(7).w,
-                              bottom: SizeExtension(7).h,
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  width: double.infinity,
-                                  height: SizeExtension(160).h,
-                                  decoration: BoxDecoration(
-                                    color: const Color.fromARGB(
-                                      255,
-                                      69,
-                                      142,
-                                      80,
-                                    ),
-                                    borderRadius: BorderRadius.circular(
-                                      SizeExtension(30).r,
-                                    ),
-                                  ),
-                                  padding: EdgeInsets.all(SizeExtension(5).w),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          SizedBox(height: SizeExtension(10).h),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                              left: SizeExtension(10).w,
-                                            ),
-                                            child: Text(
-                                              'NAAC\nNBA',
-                                              style: TextStyle(
-                                                fontSize: 17.sp,
-                                                fontWeight: FontWeight.bold,
-                                                color: MyColors.greenColor,
-                                              ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                              left: SizeExtension(10).w,
-                                            ),
-                                            child: Text(
-                                              'Accreditations',
-                                              style: TextStyle(
-                                                fontSize: 15.sp,
-                                                color: MyColors.grey,
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: -1,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Container(
-                                        width: SizeExtension(200).w,
-                                        height: SizeExtension(70).h,
-                                        decoration: BoxDecoration(
-                                          color: Theme.of(
-                                            context,
-                                          ).scaffoldBackgroundColor,
-                                          borderRadius: BorderRadius.circular(
-                                            SizeExtension(23).r,
-                                          ),
-                                        ),
-                                        padding: EdgeInsets.only(
-                                          left: SizeExtension(12).w,
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            Container(
-                                              padding: EdgeInsets.all(
-                                                SizeExtension(10).w,
-                                              ),
-                                              decoration: BoxDecoration(
-                                                color: const Color.fromARGB(
-                                                  255,
-                                                  50,
-                                                  50,
-                                                  50,
-                                                ),
-                                                shape: BoxShape.circle,
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: const Color.fromARGB(
-                                                      255,
-                                                      237,
-                                                      236,
-                                                      236,
-                                                      // ignore: deprecated_member_use
-                                                    ).withOpacity(0.1),
-                                                    blurRadius: SizeExtension(
-                                                      5,
-                                                    ).r,
-                                                    spreadRadius: SizeExtension(
-                                                      1,
-                                                    ).r,
-                                                  ),
-                                                ],
-                                              ),
-                                              child: Icon(
-                                                CupertinoIcons.book,
-                                                color: const Color.fromRGBO(
-                                                  138,
-                                                  209,
-                                                  103,
-                                                  1,
-                                                ),
-                                                size: 18.sp,
-                                              ),
-                                            ),
-                                            SizedBox(width: SizeExtension(9).w),
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  'Overview',
-                                                  style: TextStyle(
-                                                    fontSize: 15.sp,
-                                                    color: Theme.of(context)
-                                                        .textTheme
-                                                        .titleLarge
-                                                        ?.color,
-                                                    fontWeight: FontWeight.w700,
-                                                    letterSpacing: -1,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
                                 ),
                               ],
                             ),

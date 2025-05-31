@@ -20,9 +20,14 @@ class DepeceHomePage extends StatelessWidget {
                 SizedBox(height: 80),
                 SizedBox(height: 40),
                 Text(
-                  'Department of Electronics & Communication Engineering',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  'Department of Electronics\n                      &',
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                 ),
+                Text(
+                  'Communication Engineering',
+                  style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
+                ),
+
                 const SizedBox(height: 35),
                 Container(
                   height: 1.7,

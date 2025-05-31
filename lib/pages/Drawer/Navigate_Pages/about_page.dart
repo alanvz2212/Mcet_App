@@ -93,7 +93,7 @@ class AboutPage extends StatelessWidget {
                 children: [
                   TextSpan(
                     text:
-                        'Musaliar College of Engineering and Technology (MCET), located in Pathanamthitta, Kerala, is a NAAC-accredited institution under the Musaliar Education Trust. MCET offers top-tier undergraduate and postgraduate programs in engineering, management, and technology. With advanced labs, including an AI & ML Lab, a startup zone, and experienced faculty, the college emphasizes industry-relevant education and innovation, empowering students for successful careers in today\'s tech-driven world.',
+                        'Musaliar College of Engineering and Technology (MCET), Pathanamthitta, is now just a tap away with the MCET Mobile Application. This app is designed to keep students, faculty, and staff well-informed and connected by providing easy access to essential college information and services. From getting in touch with the college to exploring detailed profiles of departments and faculty, users can also stay updated on workshops and upcoming events. Additionally, the app offers valuable insights into the college’s management and showcases testimonials from students and alumni. Featuring a user-friendly design and rich multimedia content, this app brings the full campus experience to your fingertips, supporting your academic journey every step of the way.',
                   ),
                 ],
               ),
