@@ -31,10 +31,7 @@ class _LandingPageState extends State<LandingPage> {
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/college_1.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/pic2.jpg', fit: BoxFit.cover),
           ),
           Positioned.fill(
             child: AnimatedOpacity(
