@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
-import 'package:musaliarapp/widgets_3/bottom_navigation_bar.dart';
+import 'package:musaliarapp/widgets/bottom_navigation_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

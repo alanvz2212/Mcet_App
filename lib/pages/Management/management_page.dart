@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/pages/Management/chairman_details.dart';
 import 'package:musaliarapp/pages/Management/principal_details.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
-import 'package:musaliarapp/widgets_3/bottom_navigation_bar.dart';
+import 'package:musaliarapp/widgets/bottom_navigation_bar.dart';
 
 class ManagementPage extends StatefulWidget {
   const ManagementPage({super.key});

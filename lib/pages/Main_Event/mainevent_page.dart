@@ -3,9 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/pages/Main_Event/mainevent_page2.dart';
 import 'package:musaliarapp/utils/colors.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
-import 'package:musaliarapp/widgets_3/bottom_navigation_bar.dart';
-
-// import 'package:mingle/pages/tabbed_page.dart';
+import 'package:musaliarapp/widgets/bottom_navigation_bar.dart';
 
 class MaineventPage extends StatefulWidget {
   const MaineventPage({super.key});

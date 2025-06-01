@@ -183,7 +183,7 @@ Widget buildPersonTile({
       children: [
         SizedBox(
           height: 100.h,
-          width: 0.w, // Seems unused
+          width: 0.w, 
           child: Stack(
             children: [
               Positioned.fill(

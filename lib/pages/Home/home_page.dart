@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:musaliarapp/home_page_widgets/header_widget.dart';
 import 'package:musaliarapp/pages/Testimonals/testimonial.dart';
 import 'package:musaliarapp/pages/departments/cs_dept/dep_landing_page.dart';
 import 'package:musaliarapp/pages/departments/ece_dep/dep_landing_page.dart';
@@ -12,12 +11,13 @@ import 'package:musaliarapp/pages/departments/mech_dep/dep_landing_page.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
 import 'package:musaliarapp/widgets/college_things.dart';
 import 'package:musaliarapp/widgets/big_widget.dart';
+import 'package:musaliarapp/widgets/header_widget.dart';
 import 'package:musaliarapp/widgets/savings_card_widget.dart';
 import 'package:musaliarapp/utils/colors.dart';
-import 'package:musaliarapp/widgets_3/bottom_navigation_bar.dart';
-import 'package:musaliarapp/widgets_3/s_custom_painter.dart';
+import 'package:musaliarapp/widgets/bottom_navigation_bar.dart';
+import 'package:musaliarapp/widgets/s_custom_painter.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:musaliarapp/widgets_3/swipe_testimonail.dart';
+import 'package:musaliarapp/widgets/swipe_testimonail.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -190,7 +190,6 @@ class _HomePageState extends State<HomePage> {
                                 );
                               },
                             ),
-                            //////////////////////////////////////////////////////////
                             SizedBox(height: SizeExtension(20).h),
                             SavingsCardWidget(
                               text: 'Mechanical Engineering',

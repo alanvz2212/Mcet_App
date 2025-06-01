@@ -6,7 +6,7 @@ import 'package:musaliarapp/pages/Main_Event/mainevent_page.dart';
 import 'package:musaliarapp/pages/Management/management_page.dart';
 import 'package:musaliarapp/utils/colors.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
-import 'package:musaliarapp/widgets_3/frosted_widget.dart';
+import 'package:musaliarapp/widgets/frosted_widget.dart';
 import 'package:musaliarapp/pages/Home/home_page.dart';
 
 class BottomNavigationBarWidget extends StatefulWidget {

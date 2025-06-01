@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
-import 'package:musaliarapp/widgets_3/swipe_testimonail.dart';
+import 'package:musaliarapp/widgets/swipe_testimonail.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Testimonial extends StatefulWidget {

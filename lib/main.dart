@@ -13,7 +13,7 @@ void main() async {
 
   runApp(
     ScreenUtilInit(
-      designSize: Size(390, 844), // Your base design size
+      designSize: Size(390, 844),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -56,7 +56,6 @@ class MyApp extends StatelessWidget {
               ? ThemeMode.dark
               : ThemeMode.light,
           builder: (context, widget) {
-            // Ensures text scaling stays within design
             return MediaQuery(
               data: MediaQuery.of(
                 context,
