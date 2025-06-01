@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:musaliarapp/pages/departments/mca_deparment/dep_home_page.dart';
-import 'package:musaliarapp/utils/colors.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -98,7 +97,7 @@ class DepmcaLandingPage extends StatelessWidget {
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2,
-                    color: MyColors.blue,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
                 SizedBox(height: 10.h),

@@ -165,7 +165,7 @@ class _CollegeThingsState extends State<CollegeThings> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Since, 2002',
+                      'Since, 2001',
                       style: TextStyle(
                         fontSize: 17.sp,
                         fontWeight: FontWeight.w500,
@@ -206,28 +206,7 @@ class _CollegeThingsState extends State<CollegeThings> {
                 children: const [
                   TextSpan(
                     text:
-                        'Musaliar College of Engineering and Technology (musaliarapp) '
-                        'is a NAAC-accredited engineering and management institution '
-                        'located in Pathanamthitta, India. The college is under the '
-                        'renowned Musaliar Education Trust, a charitable trust founded '
-                        'in 2001 by a group of well-settled educationalists and technocrats. '
-                        'musaliarapp offers a wide range of undergraduate and postgraduate courses '
-                        'in the fields of management, engineering, and technology, '
-                        'including B.Tech in Computer Science Engineering, Electrical '
-                        'and Electronics Engineering, Mechanical Engineering, Civil '
-                        'Engineering, Electronics and Communication, Masters in VLSI '
-                        '& Embedded Systems, Computer Science & Engineering, MBA and MCA. '
-                        'The college also has a dedicated startup zone where students '
-                        'can develop their entrepreneurial skills and turn their business '
-                        'ideas into reality. The college has state-of-the-art infrastructure, '
-                        'well-equipped laboratories, and a highly qualified and experienced '
-                        'faculty. With a strong focus on industry-relevant education, '
-                        'musaliarapp prepares students for successful careers in the engineering, '
-                        'technology, and management sectors. Additionally, musaliarapp has '
-                        'an Artificial Intelligence and Machine Learning Lab that is '
-                        'equipped with state-of-the-art laboratory setup for learning '
-                        'and researching the latest technology in these fields, preparing '
-                        'students for successful careers in the field of AI and ML which is in high demand today.',
+                        'Musaliar College of Engineering and Technology is a NAAC-accredited engineering and management institution located in Pathanamthitta, India.\n\nThe college operates under the renowned Musaliar Education Trust, a charitable trust founded in 2001 by a group of well-settled educationalists and technocrats.\n\nIt offers a wide range of undergraduate and postgraduate courses in the fields of management, engineering, and technology, including B.Tech in Computer Science Engineering, Electrical and Electronics Engineering, Mechanical Engineering, Civil Engineering, Electronics and Communication, Masters in VLSI & Embedded Systems, Computer Science & Engineering, MBA, and MCA.\n\nThe college also features a dedicated startup zone where students can develop their entrepreneurial skills and turn their business ideas into reality.\n\nWith state-of-the-art infrastructure, well-equipped laboratories, and a highly qualified and experienced faculty, the college focuses on industry-relevant education to prepare students for successful careers in the engineering, technology, and management sectors.\n\nAdditionally, it has an Artificial Intelligence and Machine Learning Lab equipped with advanced tools for learning and research, helping students build successful careers in the high-demand field of AI and ML.',
                   ),
                 ],
               ),

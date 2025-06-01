@@ -187,8 +187,8 @@ Widget buildPersonTile({required BuildContext context, required String name}) {
                 maxLines: 1,
                 style: TextStyle(
                   color: Theme.of(context).textTheme.titleLarge?.color,
-                  fontSize: 15.sp,
-                  fontWeight: FontWeight.w600,
+                  fontSize: 17.sp,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ],

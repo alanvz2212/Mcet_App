@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart'; // add this import
 import 'package:musaliarapp/pages/departments/mba_dept/dep_home_page.dart';
-import 'package:musaliarapp/utils/colors.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
 
 class DepmbaLandingPage extends StatelessWidget {
@@ -99,7 +98,7 @@ class DepmbaLandingPage extends StatelessWidget {
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2,
-                    color: MyColors.blue,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
                 SizedBox(height: 10.h),
