@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:musaliarapp/utils/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
 
@@ -17,12 +16,12 @@ class DepeceHomePage extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: ListView(
               children: [
-                SizedBox(height: 80.h),
-                SizedBox(height: 40.h),
+                SizedBox(height: 100.h),
                 Text(
                   'Department of Electronics\n                      &',
                   style: TextStyle(
                     fontSize: 28.sp,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -33,7 +32,7 @@ class DepeceHomePage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 35.h),
+                SizedBox(height: 15.h),
                 Container(
                   height: 1.7.h,
                   width: double.infinity,
@@ -48,8 +47,7 @@ class DepeceHomePage extends StatelessWidget {
                   'About the Department',
                   style: TextStyle(
                     fontSize: 20.sp,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'SecondaSoft',
+                    fontWeight: FontWeight.bold,
                     color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
@@ -59,22 +57,21 @@ class DepeceHomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17.sp,
                     fontWeight: FontWeight.w500,
-                    fontFamily: 'SecondaSoft',
-                    color: MyColors.blue,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
                 SizedBox(height: 35.h),
                 Text(
-                  'Here are the Faculty Members',
+                  'Faculties Mail ID',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
                     fontSize: 20.sp,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'SecondaSoft',
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
+                SizedBox(height: 20.h),
                 Container(
-                  height: 550.h,
+                  height: 420.h,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Theme.of(context).scaffoldBackgroundColor,
@@ -84,47 +81,48 @@ class DepeceHomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       buildPersonTile(
-                        name: 'Ms Shyma Kareem (HOD)',
-                        subtitle: 'shymshiju@gmail.com',
+                        name: 'vinodc@musaliarcollege.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Jogimol Joseph',
-                        subtitle: 'jogimolb@gmail.com',
+                        name: 'jaypees03@gmail.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Sindhu Daniel',
-                        subtitle: 'sindhudaniel@yahoo.com',
+                        name: 'lijeshece@musaliarcollege.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Rinsa Rees',
-                        subtitle: 'rinsa.rees@gmail.com',
+                        name: 'aneeshsamuel@gmail.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Preethi Thomas',
-                        subtitle: '',
+                        name: 'sonaaak@gmail.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'vishnuuu.raj@gmail.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'asha.s.john@gmail.com',
                         context: context,
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 30.h),
                 Text(
-                  'WORKSHOPS CONDUCTED',
+                  'Workshops Conducted',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w300,
-                    fontFamily: 'SecondaSoft',
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(height: 15.h),
                 CollectionsWidget(assetPath: 'assets/images/ec_workshop.jpg'),
                 SizedBox(height: 10.h),
-                CollectionsWidget(assetPath: 'assets/images/5.jpg'),
+                CollectionsWidget(assetPath: ''),
                 SizedBox(height: 30.h),
               ],
             ),
@@ -174,14 +172,9 @@ class CollectionsWidget extends StatelessWidget {
   }
 }
 
-Widget buildPersonTile({
-  required BuildContext context,
-  required String name,
-  required String subtitle,
-  Icon? icon,
-}) {
+Widget buildPersonTile({required BuildContext context, required String name}) {
   return Container(
-    height: 100.h,
+    height: 50.h,
     margin: EdgeInsets.only(bottom: 10.h),
     child: Row(
       children: [
@@ -196,13 +189,11 @@ Widget buildPersonTile({
                     borderRadius: BorderRadius.circular(50.r),
                   ),
                   padding: EdgeInsets.all(18.r),
-                  // Add image if needed
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(width: 15.w),
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -214,25 +205,13 @@ Widget buildPersonTile({
                 maxLines: 1,
                 style: TextStyle(
                   color: Theme.of(context).textTheme.titleLarge?.color,
-                  fontSize: 17.sp,
+                  fontSize: 15.sp,
                   fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(height: 4.h),
-              Text(
-                subtitle,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 1,
-                style: TextStyle(
-                  color: Theme.of(context).textTheme.titleLarge?.color,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w300,
                 ),
               ),
             ],
           ),
         ),
-        if (icon != null) icon,
       ],
     ),
   );

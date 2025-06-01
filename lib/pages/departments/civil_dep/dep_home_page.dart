@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:musaliarapp/utils/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:musaliarapp/vibration/vibration_helper.dart';
 
@@ -26,7 +25,7 @@ class DepcivilHomePage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 35.h),
+                SizedBox(height: 15.h),
                 Container(
                   height: 1.7.h,
                   width: double.infinity,
@@ -41,8 +40,7 @@ class DepcivilHomePage extends StatelessWidget {
                   'About the Department',
                   style: TextStyle(
                     fontSize: 20.sp,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'SecondaSoft',
+                    fontWeight: FontWeight.bold,
                     color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
@@ -52,20 +50,19 @@ class DepcivilHomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17.sp,
                     fontWeight: FontWeight.w500,
-                    fontFamily: 'SecondaSoft',
-                    color: MyColors.blue,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
                   ),
                 ),
                 SizedBox(height: 35.h),
                 Text(
-                  'Here are the Faculty Members',
+                  'Faculties Mail ID',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
                     fontSize: 20.sp,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'SecondaSoft',
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
+                SizedBox(height: 20.h),
                 Container(
                   height: 550.h,
                   width: double.infinity,
@@ -77,40 +74,47 @@ class DepcivilHomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       buildPersonTile(
-                        name: 'Ms Shyma Kareem (HOD)',
-                        subtitle: 'shymshiju@gmail.com',
+                        name: 'bushrasheik@gmail.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Jogimol Joseph',
-                        subtitle: 'jogimolb@gmail.com',
+                        name: 'manju.nandakumar@gmail.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Sindhu Daniel',
-                        subtitle: 'sindhudaniel@yahoo.com',
+                        name: 'nisha@musaliarcollege.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Rinsa Rees',
-                        subtitle: 'rinsa.rees@gmail.com',
+                        name: 'ciby.mcet@gmail.com',
                         context: context,
                       ),
                       buildPersonTile(
-                        name: 'Ms Preethi Thomas',
-                        subtitle: '',
+                        name: 'ashbgm786@gmail.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'jissmoljames1998@gmail.com',
+                        context: context,
+                      ),
+                      buildPersonTile(
+                        name: 'lnair06@gmail.com',
+                        context: context,
+                      ),
+                      buildPersonTile(name: '--', context: context),
+                      buildPersonTile(
+                        name: 'arathirhpd@gmail.com',
                         context: context,
                       ),
                     ],
                   ),
                 ),
                 Text(
-                  'WORKSHOPS CONDUCTED',
+                  'Workshops Conducted',
                   style: TextStyle(
                     color: Theme.of(context).textTheme.titleLarge?.color,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w300,
-                    fontFamily: 'SecondaSoft',
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(height: 15.h),
@@ -170,20 +174,15 @@ class CollectionsWidget extends StatelessWidget {
   }
 }
 
-Widget buildPersonTile({
-  required BuildContext context,
-  required String name,
-  required String subtitle,
-  Icon? icon,
-}) {
+Widget buildPersonTile({required BuildContext context, required String name}) {
   return Container(
-    height: 100.h,
+    height: 50.h,
     margin: EdgeInsets.only(bottom: 10.h),
     child: Row(
       children: [
         SizedBox(
           height: 100.h,
-          width: 0.w, 
+          width: 0.w,
           child: Stack(
             children: [
               Positioned.fill(
@@ -197,7 +196,6 @@ Widget buildPersonTile({
             ],
           ),
         ),
-        SizedBox(width: 15.w),
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -209,25 +207,13 @@ Widget buildPersonTile({
                 maxLines: 1,
                 style: TextStyle(
                   color: Theme.of(context).textTheme.titleLarge?.color,
-                  fontSize: 17.sp,
+                  fontSize: 15.sp,
                   fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(height: 4.h),
-              Text(
-                subtitle,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 1,
-                style: TextStyle(
-                  color: Theme.of(context).textTheme.titleLarge?.color,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w300,
                 ),
               ),
             ],
           ),
         ),
-        if (icon != null) icon,
       ],
     ),
   );
