@@ -71,7 +71,7 @@ class DepeceHomePage extends StatelessWidget {
                 ),
                 SizedBox(height: 20.h),
                 Container(
-                  height: 420.h,
+                  height: 440.h,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Theme.of(context).scaffoldBackgroundColor,
@@ -121,8 +121,8 @@ class DepeceHomePage extends StatelessWidget {
                 ),
                 SizedBox(height: 15.h),
                 CollectionsWidget(assetPath: 'assets/images/ec_workshop.jpg'),
-                SizedBox(height: 10.h),
-                CollectionsWidget(assetPath: ''),
+                // SizedBox(height: 10.h),
+                // CollectionsWidget(assetPath: ''),
                 SizedBox(height: 30.h),
               ],
             ),
@@ -161,7 +161,7 @@ class CollectionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200.h,
+      height: 240.h,
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 1.w),
       child: ClipRRect(

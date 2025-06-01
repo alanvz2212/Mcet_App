@@ -163,7 +163,7 @@ class CollectionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200.h,
+      height: 213.h,
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 1.w),
       child: ClipRRect(

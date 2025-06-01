@@ -115,8 +115,8 @@ class DepmechHomePage extends StatelessWidget {
                 CollectionsWidget(assetPath: 'assets/images/mech_worksh.jpg'),
                 SizedBox(height: 10.h),
                 CollectionsWidget(assetPath: 'assets/images/mech_workshop.jpg'),
-                SizedBox(height: 10.h),
-                CollectionsWidget(assetPath: 'assets/images/mech2_worshop.jpg'),
+                // SizedBox(height: 10.h),
+                // CollectionsWidget(assetPath: 'assets/images/mech2_worshop.jpg'),
                 SizedBox(height: 30.h),
               ],
             ),
@@ -155,7 +155,7 @@ class CollectionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200.h,
+      height: 215.h,
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 1.w),
       child: ClipRRect(

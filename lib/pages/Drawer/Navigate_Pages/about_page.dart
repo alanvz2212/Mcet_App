@@ -93,7 +93,7 @@ class AboutPage extends StatelessWidget {
                 children: [
                   TextSpan(
                     text:
-                        'Musaliar College of Engineering and Technology (MCET), Pathanamthitta, is now just a tap away with the MCET Mobile Application. This app is designed to keep students, faculty, and staff well-informed and connected by providing easy access to essential college information and services. From getting in touch with the college to exploring detailed profiles of departments and faculty, users can also stay updated on workshops and upcoming events. Additionally, the app offers valuable insights into the college’s management and showcases testimonials from students and alumni. Featuring a user-friendly design and rich multimedia content, this app brings the full campus experience to your fingertips, supporting your academic journey every step of the way.',
+                        'Musaliar College of Engineering and Technology (MCET), Pathanamthitta, is now just a tap away with the MCET Mobile Application.\n\nThis app is designed to keep students, faculty, and staff well-informed and connected by providing easy access to essential college information and services.\n\nFrom getting in touch with the college to exploring detailed profiles of departments and faculty, users can also stay updated on workshops and upcoming events.\n\nAdditionally, the app offers valuable insights into the college’s management and showcases testimonials from students and alumni.\n\nFeaturing a user-friendly design and rich multimedia content, this app brings the full campus experience to your fingertips, supporting your academic journey every step of the way.',
                   ),
                 ],
               ),

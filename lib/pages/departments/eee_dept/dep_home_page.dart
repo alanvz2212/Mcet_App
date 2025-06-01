@@ -120,8 +120,8 @@ class DepeeeHomePage extends StatelessWidget {
                 CollectionsWidget(
                   assetPath: 'assets/images/electrical_workshop.jpg',
                 ),
-                SizedBox(height: 10.h),
-                CollectionsWidget(assetPath: 'assets/images/5.jpg'),
+                // SizedBox(height: 10.h),
+                // CollectionsWidget(assetPath: 'assets/images/5.jpg'),
                 SizedBox(height: 30.h),
               ],
             ),
@@ -160,7 +160,7 @@ class CollectionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200.h,
+      height: 205.h,
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 1.w),
       child: ClipRRect(

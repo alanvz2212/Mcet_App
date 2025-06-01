@@ -18,7 +18,7 @@ class SwipeTestimonail {
       SwipeTestimonail(
         name: 'Krishnan Unni',
         bio:
-            'Choosing MCET was one of the best decisions I made. The college focused on both technical learning and personal growth. I participated in paper presentations, workshops, and coding contests that improved my skills. Industry exposure through guest lectures and internships clarified my career path. Thanks to MCET’s strong academic culture, I graduated with confidence and a clear vision for my future.',
+            'Choosing MCET was one of the best decisions I made. The college focused on both technical learning and personal growth. I participated in paper presentations, workshops, and coding contests that improved my skills. Industry exposure through guest lectures and internships clarified my career path. Thanks to MCET’s strong academic culture, I post graduated with confidence and a clear vision for my future.',
       ),
       SwipeTestimonail(
         name: 'Aisha Sidhiq',
@@ -34,7 +34,7 @@ class SwipeTestimonail {
       SwipeTestimonail(
         name: 'Muhammed Haja',
         bio:
-            'MCET offered more than just a degree—it offered direction. Practical learning through labs and real-world projects helped me apply classroom concepts effectively. Seminars, guest lectures, and tech fests kept me industry-ready. The supportive faculty encouraged my ambitions and gave me freedom to explore ideas. The atmosphere was always positive and inspiring. I\'m proud to be an MCET alumnus, shaped by an environment that values growth and innovation.',
+            'MCET offered more than just a degree it offered direction. Practical learning through labs and real-world projects helped me apply classroom concepts effectively. Seminars, guest lectures, and tech fests kept me industry-ready. The supportive faculty encouraged my ambitions and gave me freedom to explore ideas. The atmosphere was always positive and inspiring. I\'m proud to be an MCET alumnus, shaped by an environment that values growth and innovation.',
       ),
       SwipeTestimonail(
         name: 'Shana Sherafudeen',
